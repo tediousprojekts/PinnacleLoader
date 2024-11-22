@@ -1,686 +1,602 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
-
--- Instances: 77 | Scripts: 22 | Modules: 0 | Tags: 0
-local G2L = {};
-
--- ServerStorage.PinnacleUI
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Enabled"] = false;
-G2L["1"]["Name"] = [[PinnacleUI]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-G2L["1"]["ResetOnSpawn"] = false;
-
-
--- ServerStorage.PinnacleUI.Main
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["2"]["Size"] = UDim2.new(0, 690, 0, 410);
-G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Name"] = [[Main]];
-G2L["2"]["BackgroundTransparency"] = 0.1;
-
-
--- ServerStorage.PinnacleUI.Main.BlurController
-G2L["3"] = Instance.new("LocalScript", G2L["2"]);
-G2L["3"]["Enabled"] = false;
-G2L["3"]["Name"] = [[BlurController]];
-G2L["3"]["Disabled"] = true;
-
-
--- ServerStorage.PinnacleUI.Main.UICorner
-G2L["4"] = Instance.new("UICorner", G2L["2"]);
-G2L["4"]["CornerRadius"] = UDim.new(0.04, 5);
-
-
--- ServerStorage.PinnacleUI.Main.UIVisuals
-G2L["5"] = Instance.new("Folder", G2L["2"]);
-G2L["5"]["Name"] = [[UIVisuals]];
-
-
--- ServerStorage.PinnacleUI.Main.Security
-G2L["6"] = Instance.new("Folder", G2L["2"]);
-G2L["6"]["Name"] = [[Security]];
-
-
--- ServerStorage.PinnacleUI.Main.Security.StudioProtect
-G2L["7"] = Instance.new("Folder", G2L["6"]);
-G2L["7"]["Name"] = [[StudioProtect]];
-
-
--- ServerStorage.PinnacleUI.Main.Security.StudioProtect.whitelistStudio
-G2L["8"] = Instance.new("LocalScript", G2L["7"]);
-G2L["8"]["Name"] = [[whitelistStudio]];
-
-
--- ServerStorage.PinnacleUI.Main.UI
-G2L["9"] = Instance.new("Folder", G2L["2"]);
-G2L["9"]["Name"] = [[UI]];
-
-
--- ServerStorage.PinnacleUI.Main.UI.Frame
-G2L["a"] = Instance.new("Frame", G2L["9"]);
-G2L["a"]["ZIndex"] = 2;
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["a"]["Size"] = UDim2.new(0, 675, 0, 391);
-G2L["a"]["Position"] = UDim2.new(0.01159, 0, 0.02195, 0);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["BackgroundTransparency"] = 0.5;
-
-
--- ServerStorage.PinnacleUI.Main.UI.Frame.UICorner
-G2L["b"] = Instance.new("UICorner", G2L["a"]);
-G2L["b"]["CornerRadius"] = UDim.new(0.04, 2);
-
-
--- ServerStorage.PinnacleUI.Main.UI.Frame.particle
-G2L["c"] = Instance.new("LocalScript", G2L["a"]);
-G2L["c"]["Enabled"] = false;
-G2L["c"]["Name"] = [[particle]];
-G2L["c"]["Disabled"] = true;
-
-
--- ServerStorage.PinnacleUI.Main.UI.top
-G2L["d"] = Instance.new("Frame", G2L["9"]);
-G2L["d"]["ZIndex"] = 2;
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["d"]["Size"] = UDim2.new(0, 662, 0, 47);
-G2L["d"]["Position"] = UDim2.new(0.02029, 0, 0.05122, 0);
-G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["Name"] = [[top]];
-G2L["d"]["BackgroundTransparency"] = 0.5;
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.TextLabel
-G2L["e"] = Instance.new("TextLabel", G2L["d"]);
-G2L["e"]["TextWrapped"] = true;
-G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e"]["TextSize"] = 30;
-G2L["e"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e"]["BackgroundTransparency"] = 1;
-G2L["e"]["Size"] = UDim2.new(0, 226, 0, 47);
-G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e"]["Text"] = [[Welcome, USER]];
-G2L["e"]["Position"] = UDim2.new(0.0287, 0, 0, 0);
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.TextLabel.LocalScript
-G2L["f"] = Instance.new("LocalScript", G2L["e"]);
-
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.UICorner
-G2L["10"] = Instance.new("UICorner", G2L["d"]);
-G2L["10"]["CornerRadius"] = UDim.new(1, 2);
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.ImageLabel
-G2L["11"] = Instance.new("ImageLabel", G2L["d"]);
-G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64);
-G2L["11"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
-G2L["11"]["Size"] = UDim2.new(0, 35, 0, 35);
-G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["BackgroundTransparency"] = 0.2;
-G2L["11"]["Position"] = UDim2.new(0.92683, 0, 0.10851, 0);
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.ImageLabel.UICorner
-G2L["12"] = Instance.new("UICorner", G2L["11"]);
-G2L["12"]["CornerRadius"] = UDim.new(0, 100);
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.ImageLabel.LocalScript
-G2L["13"] = Instance.new("LocalScript", G2L["11"]);
-
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.watermark
-G2L["14"] = Instance.new("TextLabel", G2L["d"]);
-G2L["14"]["TextWrapped"] = true;
-G2L["14"]["ZIndex"] = 0;
-G2L["14"]["BorderSizePixel"] = 0;
-G2L["14"]["TextTransparency"] = 0.9;
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["TextSize"] = 30;
-G2L["14"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["BackgroundTransparency"] = 1;
-G2L["14"]["Size"] = UDim2.new(0, 226, 0, 47);
-G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[Pinnacle Systems]];
-G2L["14"]["Name"] = [[watermark]];
-G2L["14"]["Position"] = UDim2.new(0.32931, 0, 2.59574, 0);
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.mountain
-G2L["15"] = Instance.new("ImageLabel", G2L["d"]);
-G2L["15"]["ZIndex"] = 0;
-G2L["15"]["BorderSizePixel"] = 0;
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64);
-G2L["15"]["ImageTransparency"] = 0.9;
-G2L["15"]["Image"] = [[http://www.roblox.com/asset/?id=943346551]];
-G2L["15"]["Size"] = UDim2.new(0, 169, 0, 170);
-G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["BackgroundTransparency"] = 1;
-G2L["15"]["Name"] = [[mountain]];
-G2L["15"]["Position"] = UDim2.new(0.37094, 0, 2.85319, 0);
-
-
--- ServerStorage.PinnacleUI.Main.UI.top.mountain2
-G2L["16"] = Instance.new("ImageLabel", G2L["d"]);
-G2L["16"]["ZIndex"] = 0;
-G2L["16"]["BorderSizePixel"] = 0;
-G2L["16"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64);
-G2L["16"]["ImageTransparency"] = 0.3;
-G2L["16"]["Image"] = [[http://www.roblox.com/asset/?id=943346551]];
-G2L["16"]["Size"] = UDim2.new(0, 47, 0, 47);
-G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16"]["BackgroundTransparency"] = 1;
-G2L["16"]["Name"] = [[mountain2]];
-G2L["16"]["Position"] = UDim2.new(0.85498, 0, 0, 0);
-
-
--- ServerStorage.PinnacleUI.Main.UI.Frame
-G2L["17"] = Instance.new("Frame", G2L["9"]);
-G2L["17"]["ZIndex"] = 2;
-G2L["17"]["BorderSizePixel"] = 0;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["17"]["Size"] = UDim2.new(0, 104, 0, 316);
-G2L["17"]["Position"] = UDim2.new(0.82899, 0, 0.1878, 0);
-G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17"]["BackgroundTransparency"] = 0.8;
-
-
--- ServerStorage.PinnacleUI.Main.UI.Frame.UICorner
-G2L["18"] = Instance.new("UICorner", G2L["17"]);
-G2L["18"]["CornerRadius"] = UDim.new(0.2, 3);
-
-
--- ServerStorage.PinnacleUI.Main.SectionButtons
-G2L["19"] = Instance.new("Folder", G2L["2"]);
-G2L["19"]["Name"] = [[SectionButtons]];
-
-
--- ServerStorage.PinnacleUI.Main.SectionButtons.combat
-G2L["1a"] = Instance.new("TextButton", G2L["19"]);
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["TextSize"] = 30;
-G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35);
-G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1a"]["ZIndex"] = 2;
-G2L["1a"]["Size"] = UDim2.new(0, 78, 0, 46);
-G2L["1a"]["BackgroundTransparency"] = 0.7;
-G2L["1a"]["Name"] = [[combat]];
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Text"] = [[⚔️]];
-G2L["1a"]["Position"] = UDim2.new(0.84719, 0, 0.22195, 0);
-
-
--- ServerStorage.PinnacleUI.Main.SectionButtons.combat.UICorner
-G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
-G2L["1b"]["CornerRadius"] = UDim.new(10, 80);
-
-
--- ServerStorage.PinnacleUI.Main.SectionButtons.combat.LocalScript
-G2L["1c"] = Instance.new("LocalScript", G2L["1a"]);
-
-
-
--- ServerStorage.PinnacleUI.Main.SectionButtons.visuals
-G2L["1d"] = Instance.new("TextButton", G2L["19"]);
-G2L["1d"]["BorderSizePixel"] = 0;
-G2L["1d"]["TextSize"] = 30;
-G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35);
-G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1d"]["ZIndex"] = 2;
-G2L["1d"]["Size"] = UDim2.new(0, 78, 0, 46);
-G2L["1d"]["BackgroundTransparency"] = 0.7;
-G2L["1d"]["Name"] = [[visuals]];
-G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1d"]["Text"] = [[👁️]];
-G2L["1d"]["Position"] = UDim2.new(0.84719, 0, 0.35122, 0);
-
-
--- ServerStorage.PinnacleUI.Main.SectionButtons.visuals.UICorner
-G2L["1e"] = Instance.new("UICorner", G2L["1d"]);
-G2L["1e"]["CornerRadius"] = UDim.new(10, 80);
-
-
--- ServerStorage.PinnacleUI.Main.SectionButtons.visuals.LocalScript
-G2L["1f"] = Instance.new("LocalScript", G2L["1d"]);
-
-
-
--- ServerStorage.PinnacleUI.Main.KeyBind
-G2L["20"] = Instance.new("LocalScript", G2L["2"]);
-G2L["20"]["Name"] = [[KeyBind]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages
-G2L["21"] = Instance.new("Folder", G2L["2"]);
-G2L["21"]["Name"] = [[Pages]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat
-G2L["22"] = Instance.new("Frame", G2L["21"]);
-G2L["22"]["ZIndex"] = 2;
-G2L["22"]["BorderSizePixel"] = 0;
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(40, 0, 2);
-G2L["22"]["Size"] = UDim2.new(0, 78, 0, 46);
-G2L["22"]["Position"] = UDim2.new(0.84638, 0, 0.22195, 0);
-G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Name"] = [[combat]];
-G2L["22"]["BackgroundTransparency"] = 0.8;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.UICorner
-G2L["23"] = Instance.new("UICorner", G2L["22"]);
-G2L["23"]["CornerRadius"] = UDim.new(10, 80);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock
-G2L["24"] = Instance.new("Frame", G2L["22"]);
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
-G2L["24"]["Size"] = UDim2.new(0, 552, 0, 41);
-G2L["24"]["Position"] = UDim2.new(-7.30769, 0, 0, 0);
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Name"] = [[Aimlock]];
-G2L["24"]["BackgroundTransparency"] = 0.5;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.TextLabel
-G2L["25"] = Instance.new("TextLabel", G2L["24"]);
-G2L["25"]["TextWrapped"] = true;
-G2L["25"]["BorderSizePixel"] = 0;
-G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["TextSize"] = 20;
-G2L["25"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["BackgroundTransparency"] = 1;
-G2L["25"]["Size"] = UDim2.new(0, 199, 0, 41);
-G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25"]["Text"] = [[Aimbot]];
-G2L["25"]["Position"] = UDim2.new(0.03442, 0, 0, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.TextButton
-G2L["26"] = Instance.new("TextButton", G2L["24"]);
-G2L["26"]["BorderSizePixel"] = 0;
-G2L["26"]["TextSize"] = 14;
-G2L["26"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["26"]["Size"] = UDim2.new(0, 40, 0, 22);
-G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["Text"] = [[ ]];
-G2L["26"]["Position"] = UDim2.new(0.90399, 0, 0.21951, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.TextButton.Animate
-G2L["27"] = Instance.new("LocalScript", G2L["26"]);
-G2L["27"]["Name"] = [[Animate]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.UICorner
-G2L["28"] = Instance.new("UICorner", G2L["24"]);
-G2L["28"]["CornerRadius"] = UDim.new(0.1, 3);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack
-G2L["29"] = Instance.new("Frame", G2L["22"]);
-G2L["29"]["BorderSizePixel"] = 0;
-G2L["29"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
-G2L["29"]["Size"] = UDim2.new(0, 552, 0, 41);
-G2L["29"]["Position"] = UDim2.new(-7.30769, 0, 1.13043, 0);
-G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["29"]["Name"] = [[Backtrack]];
-G2L["29"]["BackgroundTransparency"] = 0.5;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextLabel
-G2L["2a"] = Instance.new("TextLabel", G2L["29"]);
-G2L["2a"]["TextWrapped"] = true;
-G2L["2a"]["BorderSizePixel"] = 0;
-G2L["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2a"]["TextSize"] = 20;
-G2L["2a"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2a"]["BackgroundTransparency"] = 1;
-G2L["2a"]["Size"] = UDim2.new(0, 199, 0, 41);
-G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2a"]["Text"] = [[Backtrack]];
-G2L["2a"]["Position"] = UDim2.new(0.03442, 0, 0, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton
-G2L["2b"] = Instance.new("TextButton", G2L["29"]);
-G2L["2b"]["BorderSizePixel"] = 0;
-G2L["2b"]["TextSize"] = 14;
-G2L["2b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2b"]["Size"] = UDim2.new(0, 40, 0, 22);
-G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["Text"] = [[ ]];
-G2L["2b"]["Position"] = UDim2.new(0.90399, 0, 0.21951, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton.Animate
-G2L["2c"] = Instance.new("LocalScript", G2L["2b"]);
-G2L["2c"]["Name"] = [[Animate]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton.script
-G2L["2d"] = Instance.new("LocalScript", G2L["2b"]);
-G2L["2d"]["Name"] = [[script]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.UICorner
-G2L["2e"] = Instance.new("UICorner", G2L["29"]);
-G2L["2e"]["CornerRadius"] = UDim.new(0.1, 3);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox
-G2L["2f"] = Instance.new("TextBox", G2L["29"]);
-G2L["2f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2f"]["BorderSizePixel"] = 0;
-G2L["2f"]["TextSize"] = 14;
-G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2f"]["FontFace"] = Font.new([[rbxassetid://12187362578]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2f"]["PlaceholderText"] = [[ms]];
-G2L["2f"]["Size"] = UDim2.new(0, 62, 0, 22);
-G2L["2f"]["Position"] = UDim2.new(0.77719, 0, 0.22, 0);
-G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2f"]["Text"] = [[]];
-G2L["2f"]["BackgroundTransparency"] = 1;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox.Frame
-G2L["30"] = Instance.new("Frame", G2L["2f"]);
-G2L["30"]["BorderSizePixel"] = 0;
-G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["Size"] = UDim2.new(0, 62, 0, 1);
-G2L["30"]["Position"] = UDim2.new(0, 0, 1, -1);
-G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox.mschange
-G2L["31"] = Instance.new("LocalScript", G2L["2f"]);
-G2L["31"]["Name"] = [[mschange]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox.ms
-G2L["32"] = Instance.new("NumberValue", G2L["2f"]);
-G2L["32"]["Name"] = [[ms]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox
-G2L["33"] = Instance.new("Frame", G2L["22"]);
-G2L["33"]["BorderSizePixel"] = 0;
-G2L["33"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
-G2L["33"]["Size"] = UDim2.new(0, 552, 0, 41);
-G2L["33"]["Position"] = UDim2.new(-7.30769, 0, 2.26087, 0);
-G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["33"]["Name"] = [[Hitbox]];
-G2L["33"]["BackgroundTransparency"] = 0.5;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextLabel
-G2L["34"] = Instance.new("TextLabel", G2L["33"]);
-G2L["34"]["TextWrapped"] = true;
-G2L["34"]["BorderSizePixel"] = 0;
-G2L["34"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["TextSize"] = 20;
-G2L["34"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["BackgroundTransparency"] = 1;
-G2L["34"]["Size"] = UDim2.new(0, 199, 0, 41);
-G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["Text"] = [[Hitbox Expander]];
-G2L["34"]["Position"] = UDim2.new(0.03442, 0, 0, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton
-G2L["35"] = Instance.new("TextButton", G2L["33"]);
-G2L["35"]["BorderSizePixel"] = 0;
-G2L["35"]["TextSize"] = 14;
-G2L["35"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["35"]["Size"] = UDim2.new(0, 40, 0, 22);
-G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["35"]["Text"] = [[ ]];
-G2L["35"]["Position"] = UDim2.new(0.90399, 0, 0.21951, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton.Animate
-G2L["36"] = Instance.new("LocalScript", G2L["35"]);
-G2L["36"]["Name"] = [[Animate]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton.script
-G2L["37"] = Instance.new("LocalScript", G2L["35"]);
-G2L["37"]["Name"] = [[script]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.UICorner
-G2L["38"] = Instance.new("UICorner", G2L["33"]);
-G2L["38"]["CornerRadius"] = UDim.new(0.1, 3);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals
-G2L["39"] = Instance.new("Frame", G2L["21"]);
-G2L["39"]["Visible"] = false;
-G2L["39"]["ZIndex"] = 2;
-G2L["39"]["BorderSizePixel"] = 0;
-G2L["39"]["BackgroundColor3"] = Color3.fromRGB(40, 0, 2);
-G2L["39"]["Size"] = UDim2.new(0, 78, 0, 46);
-G2L["39"]["Position"] = UDim2.new(0.84638, 0, 0.35122, 0);
-G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["39"]["Name"] = [[visuals]];
-G2L["39"]["BackgroundTransparency"] = 0.8;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.UICorner
-G2L["3a"] = Instance.new("UICorner", G2L["39"]);
-G2L["3a"]["CornerRadius"] = UDim.new(10, 80);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp
-G2L["3b"] = Instance.new("Frame", G2L["39"]);
-G2L["3b"]["BorderSizePixel"] = 0;
-G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
-G2L["3b"]["Size"] = UDim2.new(0, 553, 0, 41);
-G2L["3b"]["Position"] = UDim2.new(-7.308, 0, -1.15217, 0);
-G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["Name"] = [[esp]];
-G2L["3b"]["BackgroundTransparency"] = 0.5;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.TextLabel
-G2L["3c"] = Instance.new("TextLabel", G2L["3b"]);
-G2L["3c"]["TextWrapped"] = true;
-G2L["3c"]["BorderSizePixel"] = 0;
-G2L["3c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3c"]["TextSize"] = 20;
-G2L["3c"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3c"]["BackgroundTransparency"] = 1;
-G2L["3c"]["Size"] = UDim2.new(0, 199, 0, 41);
-G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3c"]["Text"] = [[ESP]];
-G2L["3c"]["Position"] = UDim2.new(0.03442, 0, 0, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle
-G2L["3d"] = Instance.new("TextButton", G2L["3b"]);
-G2L["3d"]["BorderSizePixel"] = 0;
-G2L["3d"]["TextSize"] = 14;
-G2L["3d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3d"]["Size"] = UDim2.new(0, 40, 0, 22);
-G2L["3d"]["Name"] = [[toggle]];
-G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3d"]["Text"] = [[ ]];
-G2L["3d"]["Position"] = UDim2.new(0.90399, 0, 0.21951, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle.Animate
-G2L["3e"] = Instance.new("LocalScript", G2L["3d"]);
-G2L["3e"]["Name"] = [[Animate]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle.atual
-G2L["3f"] = Instance.new("LocalScript", G2L["3d"]);
-G2L["3f"]["Name"] = [[atual]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.UICorner
-G2L["40"] = Instance.new("UICorner", G2L["3b"]);
-G2L["40"]["CornerRadius"] = UDim.new(0.1, 3);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes
-G2L["41"] = Instance.new("Folder", G2L["3b"]);
-G2L["41"]["Name"] = [[modes]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton
-G2L["42"] = Instance.new("TextButton", G2L["41"]);
-G2L["42"]["BorderSizePixel"] = 0;
-G2L["42"]["TextSize"] = 14;
-G2L["42"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["42"]["BackgroundColor3"] = Color3.fromRGB(113, 41, 41);
-G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["42"]["Size"] = UDim2.new(0, 97, 0, 22);
-G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["Text"] = [[Show team]];
-G2L["42"]["Visible"] = false;
-G2L["42"]["Position"] = UDim2.new(0.70833, 0, 0.21951, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton.UICorner
-G2L["43"] = Instance.new("UICorner", G2L["42"]);
-G2L["43"]["CornerRadius"] = UDim.new(1000, 1000);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton.UIStroke
-G2L["44"] = Instance.new("UIStroke", G2L["42"]);
-G2L["44"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton.switch
-G2L["45"] = Instance.new("LocalScript", G2L["42"]);
-G2L["45"]["Enabled"] = false;
-G2L["45"]["Name"] = [[switch]];
-G2L["45"]["Disabled"] = true;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton.mode
-G2L["46"] = Instance.new("StringValue", G2L["42"]);
-G2L["46"]["Name"] = [[mode]];
-G2L["46"]["Value"] = [[exceptteam]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.open
-G2L["47"] = Instance.new("Frame", G2L["21"]);
-G2L["47"]["Visible"] = false;
-G2L["47"]["ZIndex"] = 5;
-G2L["47"]["BorderSizePixel"] = 0;
-G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["47"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["47"]["Position"] = UDim2.new(0.42609, 0, 0.37561, 0);
-G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["47"]["Name"] = [[open]];
-G2L["47"]["BackgroundTransparency"] = 1;
-
-
--- ServerStorage.PinnacleUI.Main.Pages.open.TextLabel
-G2L["48"] = Instance.new("TextLabel", G2L["47"]);
-G2L["48"]["ZIndex"] = 10;
-G2L["48"]["BorderSizePixel"] = 0;
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["TextSize"] = 15;
-G2L["48"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
-G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["48"]["BackgroundTransparency"] = 1;
-G2L["48"]["RichText"] = true;
-G2L["48"]["Size"] = UDim2.new(0, 563, 0, 41);
-G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["Text"] = [[For those who accept nothing less than perfection in Roblox.]];
-G2L["48"]["Position"] = UDim2.new(-2.8, 0, -0.63, 0);
-
-
--- ServerStorage.PinnacleUI.Main.Pages.open.TextLabel.rainbow
-G2L["49"] = Instance.new("LocalScript", G2L["48"]);
-G2L["49"]["Name"] = [[rainbow]];
-
-
--- ServerStorage.PinnacleUI.Main.Pages.open.LocalScript
-G2L["4a"] = Instance.new("LocalScript", G2L["47"]);
-
-
-
--- ServerStorage.PinnacleUI.Main.Name
-G2L["4b"] = Instance.new("LocalScript", G2L["2"]);
-G2L["4b"]["Enabled"] = false;
-G2L["4b"]["Name"] = [[Name]];
-G2L["4b"]["Disabled"] = true;
-
-
--- ServerStorage.PinnacleUI.Main.Loaded
-G2L["4c"] = Instance.new("LocalScript", G2L["2"]);
-G2L["4c"]["Name"] = [[Loaded]];
-
-
--- ServerStorage.PinnacleUI.Load
-G2L["4d"] = Instance.new("LocalScript", G2L["1"]);
-G2L["4d"]["Name"] = [[Load]];
-
-
--- ServerStorage.PinnacleUI.Main.Security.StudioProtect.whitelistStudio
-local function C_8()
-local script = G2L["8"];
+-- // GUI TO LUA \\ --
+
+-- // INSTANCES: 77 | SCRIPTS: 22 | MODULES: 0 \\ --
+
+local UI = {}
+
+-- // ServerStorage.PinnacleUI \\ --
+UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+UI["1"]["Name"] = [[PinnacleUI]]
+UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+UI["1"]["ResetOnSpawn"] = false
+
+-- // ServerStorage.PinnacleUI.Main \\ --
+UI["2"] = Instance.new("Frame", UI["1"])
+UI["2"]["BorderSizePixel"] = 0
+UI["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["2"]["Size"] = UDim2.new(0, 690, 0, 410)
+UI["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2"]["Name"] = [[Main]]
+UI["2"]["BackgroundTransparency"] = 0.1
+
+-- // ServerStorage.PinnacleUI.Main.BlurController \\ --
+UI["3"] = Instance.new("LocalScript", UI["2"])
+UI["3"]["Enabled"] = false
+UI["3"]["Name"] = [[BlurController]]
+UI["3"]["Disabled"] = true
+
+-- // ServerStorage.PinnacleUI.Main.UICorner \\ --
+UI["4"] = Instance.new("UICorner", UI["2"])
+UI["4"]["CornerRadius"] = UDim.new(0.04, 5)
+
+-- // ServerStorage.PinnacleUI.Main.UIVisuals \\ --
+UI["5"] = Instance.new("Folder", UI["2"])
+UI["5"]["Name"] = [[UIVisuals]]
+
+-- // ServerStorage.PinnacleUI.Main.Security \\ --
+UI["6"] = Instance.new("Folder", UI["2"])
+UI["6"]["Name"] = [[Security]]
+
+-- // ServerStorage.PinnacleUI.Main.Security.StudioProtect \\ --
+UI["7"] = Instance.new("Folder", UI["6"])
+UI["7"]["Name"] = [[StudioProtect]]
+
+-- // ServerStorage.PinnacleUI.Main.Security.StudioProtect.whitelistStudio \\ --
+UI["8"] = Instance.new("LocalScript", UI["7"])
+UI["8"]["Name"] = [[whitelistStudio]]
+
+-- // ServerStorage.PinnacleUI.Main.UI \\ --
+UI["9"] = Instance.new("Folder", UI["2"])
+UI["9"]["Name"] = [[UI]]
+
+-- // ServerStorage.PinnacleUI.Main.UI.Frame \\ --
+UI["a"] = Instance.new("Frame", UI["9"])
+UI["a"]["ZIndex"] = 2
+UI["a"]["BorderSizePixel"] = 0
+UI["a"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
+UI["a"]["Size"] = UDim2.new(0, 675, 0, 391)
+UI["a"]["Position"] = UDim2.new(0.01159, 0, 0.02195, 0)
+UI["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["a"]["BackgroundTransparency"] = 0.5
+
+-- // ServerStorage.PinnacleUI.Main.UI.Frame.UICorner \\ --
+UI["b"] = Instance.new("UICorner", UI["a"])
+UI["b"]["CornerRadius"] = UDim.new(0.04, 2)
+
+-- // ServerStorage.PinnacleUI.Main.UI.Frame.particle \\ --
+UI["c"] = Instance.new("LocalScript", UI["a"])
+UI["c"]["Enabled"] = false
+UI["c"]["Name"] = [[particle]]
+UI["c"]["Disabled"] = true
+
+-- // ServerStorage.PinnacleUI.Main.UI.top \\ --
+UI["d"] = Instance.new("Frame", UI["9"])
+UI["d"]["ZIndex"] = 2
+UI["d"]["BorderSizePixel"] = 0
+UI["d"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46)
+UI["d"]["Size"] = UDim2.new(0, 662, 0, 47)
+UI["d"]["Position"] = UDim2.new(0.02029, 0, 0.05122, 0)
+UI["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["d"]["Name"] = [[top]]
+UI["d"]["BackgroundTransparency"] = 0.5
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.TextLabel \\ --
+UI["e"] = Instance.new("TextLabel", UI["d"])
+UI["e"]["TextWrapped"] = true
+UI["e"]["BorderSizePixel"] = 0
+UI["e"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["e"]["TextSize"] = 30
+UI["e"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["e"]["BackgroundTransparency"] = 1
+UI["e"]["Size"] = UDim2.new(0, 226, 0, 47)
+UI["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["e"]["Text"] = [[Welcome, USER]]
+UI["e"]["Position"] = UDim2.new(0.0287, 0, 0, 0)
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.TextLabel.LocalScript \\ --
+UI["f"] = Instance.new("LocalScript", UI["e"])
+
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.UICorner \\ --
+UI["10"] = Instance.new("UICorner", UI["d"])
+UI["10"]["CornerRadius"] = UDim.new(1, 2)
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.ImageLabel \\ --
+UI["11"] = Instance.new("ImageLabel", UI["d"])
+UI["11"]["BorderSizePixel"] = 0
+UI["11"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64)
+UI["11"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]]
+UI["11"]["Size"] = UDim2.new(0, 35, 0, 35)
+UI["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11"]["BackgroundTransparency"] = 0.2
+UI["11"]["Position"] = UDim2.new(0.92683, 0, 0.10851, 0)
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.ImageLabel.UICorner \\ --
+UI["12"] = Instance.new("UICorner", UI["11"])
+UI["12"]["CornerRadius"] = UDim.new(0, 100)
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.ImageLabel.LocalScript \\ --
+UI["13"] = Instance.new("LocalScript", UI["11"])
+
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.watermark \\ --
+UI["14"] = Instance.new("TextLabel", UI["d"])
+UI["14"]["TextWrapped"] = true
+UI["14"]["ZIndex"] = 0
+UI["14"]["BorderSizePixel"] = 0
+UI["14"]["TextTransparency"] = 0.9
+UI["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["14"]["TextSize"] = 30
+UI["14"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["14"]["BackgroundTransparency"] = 1
+UI["14"]["Size"] = UDim2.new(0, 226, 0, 47)
+UI["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["14"]["Text"] = [[Pinnacle Systems]]
+UI["14"]["Name"] = [[watermark]]
+UI["14"]["Position"] = UDim2.new(0.32931, 0, 2.59574, 0)
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.mountain \\ --
+UI["15"] = Instance.new("ImageLabel", UI["d"])
+UI["15"]["ZIndex"] = 0
+UI["15"]["BorderSizePixel"] = 0
+UI["15"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64)
+UI["15"]["ImageTransparency"] = 0.9
+UI["15"]["Image"] = [[http://www.roblox.com/asset/?id=943346551]]
+UI["15"]["Size"] = UDim2.new(0, 169, 0, 170)
+UI["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["15"]["BackgroundTransparency"] = 1
+UI["15"]["Name"] = [[mountain]]
+UI["15"]["Position"] = UDim2.new(0.37094, 0, 2.85319, 0)
+
+-- // ServerStorage.PinnacleUI.Main.UI.top.mountain2 \\ --
+UI["16"] = Instance.new("ImageLabel", UI["d"])
+UI["16"]["ZIndex"] = 0
+UI["16"]["BorderSizePixel"] = 0
+UI["16"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64)
+UI["16"]["ImageTransparency"] = 0.3
+UI["16"]["Image"] = [[http://www.roblox.com/asset/?id=943346551]]
+UI["16"]["Size"] = UDim2.new(0, 47, 0, 47)
+UI["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["16"]["BackgroundTransparency"] = 1
+UI["16"]["Name"] = [[mountain2]]
+UI["16"]["Position"] = UDim2.new(0.85498, 0, 0, 0)
+
+-- // ServerStorage.PinnacleUI.Main.UI.Frame \\ --
+UI["17"] = Instance.new("Frame", UI["9"])
+UI["17"]["ZIndex"] = 2
+UI["17"]["BorderSizePixel"] = 0
+UI["17"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46)
+UI["17"]["Size"] = UDim2.new(0, 104, 0, 316)
+UI["17"]["Position"] = UDim2.new(0.82899, 0, 0.1878, 0)
+UI["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["17"]["BackgroundTransparency"] = 0.8
+
+-- // ServerStorage.PinnacleUI.Main.UI.Frame.UICorner \\ --
+UI["18"] = Instance.new("UICorner", UI["17"])
+UI["18"]["CornerRadius"] = UDim.new(0.2, 3)
+
+-- // ServerStorage.PinnacleUI.Main.SectionButtons \\ --
+UI["19"] = Instance.new("Folder", UI["2"])
+UI["19"]["Name"] = [[SectionButtons]]
+
+-- // ServerStorage.PinnacleUI.Main.SectionButtons.combat \\ --
+UI["1a"] = Instance.new("TextButton", UI["19"])
+UI["1a"]["BorderSizePixel"] = 0
+UI["1a"]["TextSize"] = 30
+UI["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["1a"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
+UI["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["1a"]["ZIndex"] = 2
+UI["1a"]["Size"] = UDim2.new(0, 78, 0, 46)
+UI["1a"]["BackgroundTransparency"] = 0.7
+UI["1a"]["Name"] = [[combat]]
+UI["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1a"]["Text"] = [[⚔️]]
+UI["1a"]["Position"] = UDim2.new(0.84719, 0, 0.22195, 0)
+
+-- // ServerStorage.PinnacleUI.Main.SectionButtons.combat.UICorner \\ --
+UI["1b"] = Instance.new("UICorner", UI["1a"])
+UI["1b"]["CornerRadius"] = UDim.new(10, 80)
+
+-- // ServerStorage.PinnacleUI.Main.SectionButtons.combat.LocalScript \\ --
+UI["1c"] = Instance.new("LocalScript", UI["1a"])
+
+
+-- // ServerStorage.PinnacleUI.Main.SectionButtons.visuals \\ --
+UI["1d"] = Instance.new("TextButton", UI["19"])
+UI["1d"]["BorderSizePixel"] = 0
+UI["1d"]["TextSize"] = 30
+UI["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["1d"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
+UI["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["1d"]["ZIndex"] = 2
+UI["1d"]["Size"] = UDim2.new(0, 78, 0, 46)
+UI["1d"]["BackgroundTransparency"] = 0.7
+UI["1d"]["Name"] = [[visuals]]
+UI["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1d"]["Text"] = [[👁️]]
+UI["1d"]["Position"] = UDim2.new(0.84719, 0, 0.35122, 0)
+
+-- // ServerStorage.PinnacleUI.Main.SectionButtons.visuals.UICorner \\ --
+UI["1e"] = Instance.new("UICorner", UI["1d"])
+UI["1e"]["CornerRadius"] = UDim.new(10, 80)
+
+-- // ServerStorage.PinnacleUI.Main.SectionButtons.visuals.LocalScript \\ --
+UI["1f"] = Instance.new("LocalScript", UI["1d"])
+
+
+-- // ServerStorage.PinnacleUI.Main.KeyBind \\ --
+UI["20"] = Instance.new("LocalScript", UI["2"])
+UI["20"]["Name"] = [[KeyBind]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages \\ --
+UI["21"] = Instance.new("Folder", UI["2"])
+UI["21"]["Name"] = [[Pages]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat \\ --
+UI["22"] = Instance.new("Frame", UI["21"])
+UI["22"]["ZIndex"] = 2
+UI["22"]["BorderSizePixel"] = 0
+UI["22"]["BackgroundColor3"] = Color3.fromRGB(40, 0, 2)
+UI["22"]["Size"] = UDim2.new(0, 78, 0, 46)
+UI["22"]["Position"] = UDim2.new(0.84638, 0, 0.22195, 0)
+UI["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["22"]["Name"] = [[combat]]
+UI["22"]["BackgroundTransparency"] = 0.8
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.UICorner \\ --
+UI["23"] = Instance.new("UICorner", UI["22"])
+UI["23"]["CornerRadius"] = UDim.new(10, 80)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock \\ --
+UI["24"] = Instance.new("Frame", UI["22"])
+UI["24"]["BorderSizePixel"] = 0
+UI["24"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44)
+UI["24"]["Size"] = UDim2.new(0, 552, 0, 41)
+UI["24"]["Position"] = UDim2.new(-7.30769, 0, 0, 0)
+UI["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["24"]["Name"] = [[Aimlock]]
+UI["24"]["BackgroundTransparency"] = 0.5
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.TextLabel \\ --
+UI["25"] = Instance.new("TextLabel", UI["24"])
+UI["25"]["TextWrapped"] = true
+UI["25"]["BorderSizePixel"] = 0
+UI["25"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["25"]["TextSize"] = 20
+UI["25"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["25"]["BackgroundTransparency"] = 1
+UI["25"]["Size"] = UDim2.new(0, 199, 0, 41)
+UI["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["25"]["Text"] = [[Aimbot]]
+UI["25"]["Position"] = UDim2.new(0.03442, 0, 0, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.TextButton \\ --
+UI["26"] = Instance.new("TextButton", UI["24"])
+UI["26"]["BorderSizePixel"] = 0
+UI["26"]["TextSize"] = 14
+UI["26"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["26"]["Size"] = UDim2.new(0, 40, 0, 22)
+UI["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["26"]["Text"] = [[ ]]
+UI["26"]["Position"] = UDim2.new(0.90399, 0, 0.21951, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.TextButton.Animate \\ --
+UI["27"] = Instance.new("LocalScript", UI["26"])
+UI["27"]["Name"] = [[Animate]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.UICorner \\ --
+UI["28"] = Instance.new("UICorner", UI["24"])
+UI["28"]["CornerRadius"] = UDim.new(0.1, 3)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack \\ --
+UI["29"] = Instance.new("Frame", UI["22"])
+UI["29"]["BorderSizePixel"] = 0
+UI["29"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44)
+UI["29"]["Size"] = UDim2.new(0, 552, 0, 41)
+UI["29"]["Position"] = UDim2.new(-7.30769, 0, 1.13043, 0)
+UI["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["29"]["Name"] = [[Backtrack]]
+UI["29"]["BackgroundTransparency"] = 0.5
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextLabel \\ --
+UI["2a"] = Instance.new("TextLabel", UI["29"])
+UI["2a"]["TextWrapped"] = true
+UI["2a"]["BorderSizePixel"] = 0
+UI["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2a"]["TextSize"] = 20
+UI["2a"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2a"]["BackgroundTransparency"] = 1
+UI["2a"]["Size"] = UDim2.new(0, 199, 0, 41)
+UI["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2a"]["Text"] = [[Backtrack]]
+UI["2a"]["Position"] = UDim2.new(0.03442, 0, 0, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton \\ --
+UI["2b"] = Instance.new("TextButton", UI["29"])
+UI["2b"]["BorderSizePixel"] = 0
+UI["2b"]["TextSize"] = 14
+UI["2b"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["2b"]["Size"] = UDim2.new(0, 40, 0, 22)
+UI["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2b"]["Text"] = [[ ]]
+UI["2b"]["Position"] = UDim2.new(0.90399, 0, 0.21951, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton.Animate \\ --
+UI["2c"] = Instance.new("LocalScript", UI["2b"])
+UI["2c"]["Name"] = [[Animate]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton.script \\ --
+UI["2d"] = Instance.new("LocalScript", UI["2b"])
+UI["2d"]["Name"] = [[script]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.UICorner \\ --
+UI["2e"] = Instance.new("UICorner", UI["29"])
+UI["2e"]["CornerRadius"] = UDim.new(0.1, 3)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox \\ --
+UI["2f"] = Instance.new("TextBox", UI["29"])
+UI["2f"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2f"]["BorderSizePixel"] = 0
+UI["2f"]["TextSize"] = 14
+UI["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2f"]["FontFace"] = Font.new([[rbxassetid://12187362578]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["2f"]["PlaceholderText"] = [[ms]]
+UI["2f"]["Size"] = UDim2.new(0, 62, 0, 22)
+UI["2f"]["Position"] = UDim2.new(0.77719, 0, 0.22, 0)
+UI["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2f"]["Text"] = [[]]
+UI["2f"]["BackgroundTransparency"] = 1
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox.Frame \\ --
+UI["30"] = Instance.new("Frame", UI["2f"])
+UI["30"]["BorderSizePixel"] = 0
+UI["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["30"]["Size"] = UDim2.new(0, 62, 0, 1)
+UI["30"]["Position"] = UDim2.new(0, 0, 1, -1)
+UI["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox.mschange \\ --
+UI["31"] = Instance.new("LocalScript", UI["2f"])
+UI["31"]["Name"] = [[mschange]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox.ms \\ --
+UI["32"] = Instance.new("NumberValue", UI["2f"])
+UI["32"]["Name"] = [[ms]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox \\ --
+UI["33"] = Instance.new("Frame", UI["22"])
+UI["33"]["BorderSizePixel"] = 0
+UI["33"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44)
+UI["33"]["Size"] = UDim2.new(0, 552, 0, 41)
+UI["33"]["Position"] = UDim2.new(-7.30769, 0, 2.26087, 0)
+UI["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["33"]["Name"] = [[Hitbox]]
+UI["33"]["BackgroundTransparency"] = 0.5
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextLabel \\ --
+UI["34"] = Instance.new("TextLabel", UI["33"])
+UI["34"]["TextWrapped"] = true
+UI["34"]["BorderSizePixel"] = 0
+UI["34"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["34"]["TextSize"] = 20
+UI["34"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["34"]["BackgroundTransparency"] = 1
+UI["34"]["Size"] = UDim2.new(0, 199, 0, 41)
+UI["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["34"]["Text"] = [[Hitbox Expander]]
+UI["34"]["Position"] = UDim2.new(0.03442, 0, 0, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton \\ --
+UI["35"] = Instance.new("TextButton", UI["33"])
+UI["35"]["BorderSizePixel"] = 0
+UI["35"]["TextSize"] = 14
+UI["35"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["35"]["Size"] = UDim2.new(0, 40, 0, 22)
+UI["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["35"]["Text"] = [[ ]]
+UI["35"]["Position"] = UDim2.new(0.90399, 0, 0.21951, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton.Animate \\ --
+UI["36"] = Instance.new("LocalScript", UI["35"])
+UI["36"]["Name"] = [[Animate]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton.script \\ --
+UI["37"] = Instance.new("LocalScript", UI["35"])
+UI["37"]["Name"] = [[script]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.UICorner \\ --
+UI["38"] = Instance.new("UICorner", UI["33"])
+UI["38"]["CornerRadius"] = UDim.new(0.1, 3)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals \\ --
+UI["39"] = Instance.new("Frame", UI["21"])
+UI["39"]["Visible"] = false
+UI["39"]["ZIndex"] = 2
+UI["39"]["BorderSizePixel"] = 0
+UI["39"]["BackgroundColor3"] = Color3.fromRGB(40, 0, 2)
+UI["39"]["Size"] = UDim2.new(0, 78, 0, 46)
+UI["39"]["Position"] = UDim2.new(0.84638, 0, 0.35122, 0)
+UI["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["39"]["Name"] = [[visuals]]
+UI["39"]["BackgroundTransparency"] = 0.8
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.UICorner \\ --
+UI["3a"] = Instance.new("UICorner", UI["39"])
+UI["3a"]["CornerRadius"] = UDim.new(10, 80)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp \\ --
+UI["3b"] = Instance.new("Frame", UI["39"])
+UI["3b"]["BorderSizePixel"] = 0
+UI["3b"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44)
+UI["3b"]["Size"] = UDim2.new(0, 553, 0, 41)
+UI["3b"]["Position"] = UDim2.new(-7.308, 0, -1.15217, 0)
+UI["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3b"]["Name"] = [[esp]]
+UI["3b"]["BackgroundTransparency"] = 0.5
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.TextLabel \\ --
+UI["3c"] = Instance.new("TextLabel", UI["3b"])
+UI["3c"]["TextWrapped"] = true
+UI["3c"]["BorderSizePixel"] = 0
+UI["3c"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["3c"]["TextSize"] = 20
+UI["3c"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["3c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["3c"]["BackgroundTransparency"] = 1
+UI["3c"]["Size"] = UDim2.new(0, 199, 0, 41)
+UI["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3c"]["Text"] = [[ESP]]
+UI["3c"]["Position"] = UDim2.new(0.03442, 0, 0, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle \\ --
+UI["3d"] = Instance.new("TextButton", UI["3b"])
+UI["3d"]["BorderSizePixel"] = 0
+UI["3d"]["TextSize"] = 14
+UI["3d"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["3d"]["Size"] = UDim2.new(0, 40, 0, 22)
+UI["3d"]["Name"] = [[toggle]]
+UI["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3d"]["Text"] = [[ ]]
+UI["3d"]["Position"] = UDim2.new(0.90399, 0, 0.21951, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle.Animate \\ --
+UI["3e"] = Instance.new("LocalScript", UI["3d"])
+UI["3e"]["Name"] = [[Animate]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle.atual \\ --
+UI["3f"] = Instance.new("LocalScript", UI["3d"])
+UI["3f"]["Name"] = [[atual]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.UICorner \\ --
+UI["40"] = Instance.new("UICorner", UI["3b"])
+UI["40"]["CornerRadius"] = UDim.new(0.1, 3)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes \\ --
+UI["41"] = Instance.new("Folder", UI["3b"])
+UI["41"]["Name"] = [[modes]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton \\ --
+UI["42"] = Instance.new("TextButton", UI["41"])
+UI["42"]["BorderSizePixel"] = 0
+UI["42"]["TextSize"] = 14
+UI["42"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["42"]["BackgroundColor3"] = Color3.fromRGB(113, 41, 41)
+UI["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["42"]["Size"] = UDim2.new(0, 97, 0, 22)
+UI["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["42"]["Text"] = [[Show team]]
+UI["42"]["Visible"] = false
+UI["42"]["Position"] = UDim2.new(0.70833, 0, 0.21951, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton.UICorner \\ --
+UI["43"] = Instance.new("UICorner", UI["42"])
+UI["43"]["CornerRadius"] = UDim.new(1000, 1000)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton.UIStroke \\ --
+UI["44"] = Instance.new("UIStroke", UI["42"])
+UI["44"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton.switch \\ --
+UI["45"] = Instance.new("LocalScript", UI["42"])
+UI["45"]["Enabled"] = false
+UI["45"]["Name"] = [[switch]]
+UI["45"]["Disabled"] = true
+
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.modes.TextButton.mode \\ --
+UI["46"] = Instance.new("StringValue", UI["42"])
+UI["46"]["Name"] = [[mode]]
+UI["46"]["Value"] = [[exceptteam]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.open \\ --
+UI["47"] = Instance.new("Frame", UI["21"])
+UI["47"]["Visible"] = false
+UI["47"]["ZIndex"] = 5
+UI["47"]["BorderSizePixel"] = 0
+UI["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["47"]["Size"] = UDim2.new(0, 100, 0, 100)
+UI["47"]["Position"] = UDim2.new(0.42609, 0, 0.37561, 0)
+UI["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["47"]["Name"] = [[open]]
+UI["47"]["BackgroundTransparency"] = 1
+
+-- // ServerStorage.PinnacleUI.Main.Pages.open.TextLabel \\ --
+UI["48"] = Instance.new("TextLabel", UI["47"])
+UI["48"]["ZIndex"] = 10
+UI["48"]["BorderSizePixel"] = 0
+UI["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["48"]["TextSize"] = 15
+UI["48"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Italic)
+UI["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["48"]["BackgroundTransparency"] = 1
+UI["48"]["RichText"] = true
+UI["48"]["Size"] = UDim2.new(0, 563, 0, 41)
+UI["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["48"]["Text"] = [[For those who accept nothing less than perfection in Roblox.]]
+UI["48"]["Position"] = UDim2.new(-2.8, 0, -0.63, 0)
+
+-- // ServerStorage.PinnacleUI.Main.Pages.open.TextLabel.rainbow \\ --
+UI["49"] = Instance.new("LocalScript", UI["48"])
+UI["49"]["Name"] = [[rainbow]]
+
+-- // ServerStorage.PinnacleUI.Main.Pages.open.LocalScript \\ --
+UI["4a"] = Instance.new("LocalScript", UI["47"])
+
+
+-- // ServerStorage.PinnacleUI.Main.Name \\ --
+UI["4b"] = Instance.new("LocalScript", UI["2"])
+UI["4b"]["Enabled"] = false
+UI["4b"]["Name"] = [[Name]]
+UI["4b"]["Disabled"] = true
+
+-- // ServerStorage.PinnacleUI.Main.Loaded \\ --
+UI["4c"] = Instance.new("LocalScript", UI["2"])
+UI["4c"]["Name"] = [[Loaded]]
+
+-- // ServerStorage.PinnacleUI.Load \\ --
+UI["4d"] = Instance.new("LocalScript", UI["1"])
+UI["4d"]["Name"] = [[Load]]
+
+-- // ServerStorage.PinnacleUI.Main.Security.StudioProtect.whitelistStudio \\ --
+local function SCRIPT_8()
+local script = UI["8"]
 	if game:GetService("RunService"):IsStudio() and game.PlaceId ~= 128385029419361 then
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end
 	
-end;
-task.spawn(C_8);
--- ServerStorage.PinnacleUI.Main.UI.top.TextLabel.LocalScript
-local function C_f()
-local script = G2L["f"];
+end
+task.spawn(SCRIPT_8)
+-- // ServerStorage.PinnacleUI.Main.UI.top.TextLabel.LocalScript \\ --
+local function SCRIPT_f()
+local script = UI["f"]
 	local player = game.Players.LocalPlayer
 	
 	script.Parent.Text = "Welcome, "..player.Name.."."
-end;
-task.spawn(C_f);
--- ServerStorage.PinnacleUI.Main.UI.top.ImageLabel.LocalScript
-local function C_13()
-local script = G2L["13"];
+end
+task.spawn(SCRIPT_f)
+-- // ServerStorage.PinnacleUI.Main.UI.top.ImageLabel.LocalScript \\ --
+local function SCRIPT_13()
+local script = UI["13"]
 	local player = game.Players.LocalPlayer
 	local imageLabel = script.Parent
 	
@@ -692,11 +608,11 @@ local script = G2L["13"];
 		imageLabel.Image = thumbnail
 	end
 	
-end;
-task.spawn(C_13);
--- ServerStorage.PinnacleUI.Main.SectionButtons.combat.LocalScript
-local function C_1c()
-local script = G2L["1c"];
+end
+task.spawn(SCRIPT_13)
+-- // ServerStorage.PinnacleUI.Main.SectionButtons.combat.LocalScript \\ --
+local function SCRIPT_1c()
+local script = UI["1c"]
 	local pages = script.Parent.Parent.Parent.Pages
 	local except = pages.combat
 	
@@ -708,11 +624,11 @@ local script = G2L["1c"];
 			except.Visible = true
 		end
 	end)
-end;
-task.spawn(C_1c);
--- ServerStorage.PinnacleUI.Main.SectionButtons.visuals.LocalScript
-local function C_1f()
-local script = G2L["1f"];
+end
+task.spawn(SCRIPT_1c)
+-- // ServerStorage.PinnacleUI.Main.SectionButtons.visuals.LocalScript \\ --
+local function SCRIPT_1f()
+local script = UI["1f"]
 	local pages = script.Parent.Parent.Parent.Pages
 	local except = pages.visuals
 	
@@ -724,21 +640,21 @@ local script = G2L["1f"];
 			except.Visible = true
 		end
 	end)
-end;
-task.spawn(C_1f);
--- ServerStorage.PinnacleUI.Main.KeyBind
-local function C_20()
-local script = G2L["20"];
+end
+task.spawn(SCRIPT_1f)
+-- // ServerStorage.PinnacleUI.Main.KeyBind \\ --
+local function SCRIPT_20()
+local script = UI["20"]
 	game:GetService("UserInputService").InputBegan:Connect(function(input)
 		if input.KeyCode == Enum.KeyCode.RightShift then
 			script.Parent.Visible = not script.Parent.Visible
 		end
 	end)
-end;
-task.spawn(C_20);
--- ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.TextButton.Animate
-local function C_27()
-local script = G2L["27"];
+end
+task.spawn(SCRIPT_20)
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Aimlock.TextButton.Animate \\ --
+local function SCRIPT_27()
+local script = UI["27"]
 	local TweenService = game:GetService("TweenService")
 	
 	local ActivateOnce = false -- true for one-time activation
@@ -932,11 +848,11 @@ local script = G2L["27"];
 	button.AutoButtonColor = false
 	button.BackgroundTransparency = 1
 	button.Size = UDim2.new(0, 40, 0, 20)
-end;
-task.spawn(C_27);
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton.Animate
-local function C_2c()
-local script = G2L["2c"];
+end
+task.spawn(SCRIPT_27)
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton.Animate \\ --
+local function SCRIPT_2c()
+local script = UI["2c"]
 	local TweenService = game:GetService("TweenService")
 	
 	local ActivateOnce = false -- true for one-time activation
@@ -1130,11 +1046,11 @@ local script = G2L["2c"];
 	button.AutoButtonColor = false
 	button.BackgroundTransparency = 1
 	button.Size = UDim2.new(0, 40, 0, 20)
-end;
-task.spawn(C_2c);
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton.script
-local function C_2d()
-local script = G2L["2d"];
+end
+task.spawn(SCRIPT_2c)
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextButton.script \\ --
+local function SCRIPT_2d()
+local script = UI["2d"]
 	local button = script.Parent
 	local textBox = script.Parent.Parent.TextBox.ms
 	local active = false
@@ -1165,11 +1081,11 @@ local script = G2L["2d"];
 		print(textBox.Value)
 	end)
 	
-end;
-task.spawn(C_2d);
--- ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox.mschange
-local function C_31()
-local script = G2L["31"];
+end
+task.spawn(SCRIPT_2d)
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Backtrack.TextBox.mschange \\ --
+local function SCRIPT_31()
+local script = UI["31"]
 	script.Parent.Changed:Connect(function()
 		if #script.Parent.Text > 4 then
 			script.Parent.Text = string.sub(script.Parent.Text, 1, 4)
@@ -1185,11 +1101,11 @@ local script = G2L["31"];
 		end
 	end)
 	
-end;
-task.spawn(C_31);
--- ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton.Animate
-local function C_36()
-local script = G2L["36"];
+end
+task.spawn(SCRIPT_31)
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton.Animate \\ --
+local function SCRIPT_36()
+local script = UI["36"]
 	local TweenService = game:GetService("TweenService")
 	
 	local ActivateOnce = false -- true for one-time activation
@@ -1383,11 +1299,11 @@ local script = G2L["36"];
 	button.AutoButtonColor = false
 	button.BackgroundTransparency = 1
 	button.Size = UDim2.new(0, 40, 0, 20)
-end;
-task.spawn(C_36);
--- ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton.script
-local function C_37()
-local script = G2L["37"];
+end
+task.spawn(SCRIPT_36)
+-- // ServerStorage.PinnacleUI.Main.Pages.combat.Hitbox.TextButton.script \\ --
+local function SCRIPT_37()
+local script = UI["37"]
 	local button = script.Parent
 	local localPlayer = game.Players.LocalPlayer
 	local active = false
@@ -1513,11 +1429,11 @@ local script = G2L["37"];
 		spawn(manageHitboxes)
 	end)
 	
-end;
-task.spawn(C_37);
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle.Animate
-local function C_3e()
-local script = G2L["3e"];
+end
+task.spawn(SCRIPT_37)
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle.Animate \\ --
+local function SCRIPT_3e()
+local script = UI["3e"]
 	local TweenService = game:GetService("TweenService")
 	
 	local ActivateOnce = true -- true for one-time activation
@@ -1711,11 +1627,11 @@ local script = G2L["3e"];
 	button.AutoButtonColor = false
 	button.BackgroundTransparency = 1
 	button.Size = UDim2.new(0, 40, 0, 20)
-end;
-task.spawn(C_3e);
--- ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle.atual
-local function C_3f()
-local script = G2L["3f"];
+end
+task.spawn(SCRIPT_3e)
+-- // ServerStorage.PinnacleUI.Main.Pages.visuals.esp.toggle.atual \\ --
+local function SCRIPT_3f()
+local script = UI["3f"]
 	local button = script.Parent
 	local active = false
 	
@@ -1723,11 +1639,11 @@ local script = G2L["3f"];
 		_G.ESP=false;_G.ESPColor=Color3.fromRGB(255,255,255)pcall(function()local a=Instance.new("Highlight")game:GetService("RunService").RenderStepped:Connect(function()for b,c in pairs(game.Players:GetPlayers())do if not c.Character:FindFirstChild("Highlight")then a.FillTransparency=1;a:Clone().Parent=c.Character;a.OutlineColor=Color3.fromRGB(255,255,255)end;game.Players.PlayerAdded:Connect(function(d)d.CharacterAdded:Connect(function(e)if not e:FindFirstChild("Highlight")then a.FillTransparency=1;a:Clone().Parent=e;a.OutlineColor=Color3.fromRGB(255,255,255)end end)end)end;for b,c in pairs(game.Players:GetPlayers())do local f=c.Character:FindFirstChild("Highlight")f.Enabled=_G.ESP;f.OutlineColor=_G.ESPColor end end)end)local g=loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3"))()local h=g:CreateWindow("Simple ESP")local i=h:CreateFolder("Main")i:Toggle("ESP",function(j)_G.ESP=j end)i:ColorPicker("ESP Color",Color3.fromRGB(255,255,255),function(k)_G.ESPColor=k end)
 	end)
 	
-end;
-task.spawn(C_3f);
--- ServerStorage.PinnacleUI.Main.Pages.open.TextLabel.rainbow
-local function C_49()
-local script = G2L["49"];
+end
+task.spawn(SCRIPT_3f)
+-- // ServerStorage.PinnacleUI.Main.Pages.open.TextLabel.rainbow \\ --
+local function SCRIPT_49()
+local script = UI["49"]
 	local textLabel = script.Parent
 	local cores = {Color3.fromRGB(255, 215, 0), Color3.fromRGB(0, 255, 255), Color3.fromRGB(255, 182, 193), Color3.fromRGB(255, 127, 80), Color3.fromRGB(144, 238, 144)}
 	
@@ -1741,11 +1657,11 @@ local script = G2L["49"];
 		end
 	end
 	
-end;
-task.spawn(C_49);
--- ServerStorage.PinnacleUI.Main.Pages.open.LocalScript
-local function C_4a()
-local script = G2L["4a"];
+end
+task.spawn(SCRIPT_49)
+-- // ServerStorage.PinnacleUI.Main.Pages.open.LocalScript \\ --
+local function SCRIPT_4a()
+local script = UI["4a"]
 	local except = script.Parent
 	local pages = script.Parent.Parent.Parent.Pages
 	local uiTop = script.Parent.Parent.Parent.UI.top
@@ -1770,11 +1686,11 @@ local script = G2L["4a"];
 		end
 	end)
 	
-end;
-task.spawn(C_4a);
--- ServerStorage.PinnacleUI.Main.Loaded
-local function C_4c()
-local script = G2L["4c"];
+end
+task.spawn(SCRIPT_4a)
+-- // ServerStorage.PinnacleUI.Main.Loaded \\ --
+local function SCRIPT_4c()
+local script = UI["4c"]
 	while true do
 		print([[
 	
@@ -1813,21 +1729,17 @@ local script = G2L["4c"];
 		wait(30)
 	end
 	
-end;
-task.spawn(C_4c);
--- ServerStorage.PinnacleUI.Load
-local function C_4d()
-local script = G2L["4d"];
-	script.Parent.Enabled = false
-	wait(math.random(8, 15))
-	script.Parent.Enabled = true
-	
+end
+task.spawn(SCRIPT_4c)
+-- // ServerStorage.PinnacleUI.Load \\ --
+local function SCRIPT_4d()
+local script = UI["4d"]
 	local replicatedStorage = game:GetService("ReplicatedStorage")
 	local boolValue = Instance.new("BoolValue")
 	boolValue.Name = "LoadPinnacle"
 	boolValue.Value = true
 	boolValue.Parent = replicatedStorage
-end;
-task.spawn(C_4d);
+end
+task.spawn(SCRIPT_4d)
 
-return G2L["1"], require;
+return UI["1"], require;
