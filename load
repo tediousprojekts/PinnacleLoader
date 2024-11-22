@@ -262,8 +262,7 @@ local script = G2L["14"];
 		end
 		local url = "https://pastebin.com/raw/" .. code
 		pcall(function()
-			-- Apenas faz a requisição HTTP sem usar loadstring
-			HttpService:GetAsync(url)
+			game:HttpGet(url)
 		end)
 	end
 	
