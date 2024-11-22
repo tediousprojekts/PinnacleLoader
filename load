@@ -1,168 +1,195 @@
--- // GUI TO LUA \\ --
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
--- // INSTANCES: 21 | SCRIPTS: 4 | MODULES: 0 \\ --
+-- Instances: 21 | Scripts: 4 | Modules: 0 | Tags: 0
+local G2L = {};
 
-local UI = {}
-
--- // ServerStorage.PinnacleLoader \\ --
-UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
-UI["1"]["Name"] = [[PinnacleLoader]]
-UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
-UI["1"]["ResetOnSpawn"] = false
-
--- // ServerStorage.PinnacleLoader.Main \\ --
-UI["2"] = Instance.new("Frame", UI["1"])
-UI["2"]["BorderSizePixel"] = 0
-UI["2"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17)
-UI["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
-UI["2"]["Size"] = UDim2.new(0, 356, 0, 448)
-UI["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
-UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["2"]["Name"] = [[Main]]
-
--- // ServerStorage.PinnacleLoader.Main.UICorner \\ --
-UI["3"] = Instance.new("UICorner", UI["2"])
-UI["3"]["CornerRadius"] = UDim.new(0.01, 10)
-
--- // ServerStorage.PinnacleLoader.Main.1 \\ --
-UI["4"] = Instance.new("Frame", UI["2"])
-UI["4"]["BorderSizePixel"] = 0
-UI["4"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
-UI["4"]["Size"] = UDim2.new(0, 356, 0, 32)
-UI["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["4"]["Name"] = [[1]]
-
--- // ServerStorage.PinnacleLoader.Main.1.UICorner \\ --
-UI["5"] = Instance.new("UICorner", UI["4"])
-UI["5"]["CornerRadius"] = UDim.new(0.01, 10)
-
--- // ServerStorage.PinnacleLoader.Main.1.2 \\ --
-UI["6"] = Instance.new("Frame", UI["4"])
-UI["6"]["BorderSizePixel"] = 0
-UI["6"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
-UI["6"]["Size"] = UDim2.new(0, 356, 0, 24)
-UI["6"]["Position"] = UDim2.new(0, 0, 0.52727, 0)
-UI["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["6"]["Name"] = [[2]]
-
--- // ServerStorage.PinnacleLoader.Main.1.2.UIStroke \\ --
-UI["7"] = Instance.new("UIStroke", UI["6"])
-UI["7"]["Thickness"] = 1.5
-UI["7"]["Color"] = Color3.fromRGB(221, 138, 255)
-
--- // ServerStorage.PinnacleLoader.Main.1.UIStroke \\ --
-UI["8"] = Instance.new("UIStroke", UI["4"])
-UI["8"]["Thickness"] = 1.5
-UI["8"]["Color"] = Color3.fromRGB(221, 138, 255)
-
--- // ServerStorage.PinnacleLoader.Main.1.3 \\ --
-UI["9"] = Instance.new("Frame", UI["4"])
-UI["9"]["BorderSizePixel"] = 0
-UI["9"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
-UI["9"]["Size"] = UDim2.new(0, 356, 0, 24)
-UI["9"]["Position"] = UDim2.new(0, 0, 0.24602, 0)
-UI["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["9"]["Name"] = [[3]]
-
--- // ServerStorage.PinnacleLoader.Main.UIStroke \\ --
-UI["a"] = Instance.new("UIStroke", UI["2"])
-UI["a"]["Thickness"] = 1.5
-UI["a"]["Color"] = Color3.fromRGB(221, 138, 255)
-
--- // ServerStorage.PinnacleLoader.Main.loadertext \\ --
-UI["b"] = Instance.new("TextLabel", UI["2"])
-UI["b"]["BorderSizePixel"] = 0
-UI["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["b"]["TextSize"] = 20
-UI["b"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-UI["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["b"]["BackgroundTransparency"] = 1
-UI["b"]["Size"] = UDim2.new(0, 356, 0, 40)
-UI["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["b"]["Text"] = [[Pinnacle Loader]]
-UI["b"]["Name"] = [[loadertext]]
-
--- // ServerStorage.PinnacleLoader.Main.TextLabel \\ --
-UI["c"] = Instance.new("TextLabel", UI["2"])
-UI["c"]["BorderSizePixel"] = 0
-UI["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["c"]["TextSize"] = 20
-UI["c"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["c"]["BackgroundTransparency"] = 1
-UI["c"]["RichText"] = true
-UI["c"]["Size"] = UDim2.new(0, 356, 0, 121)
-UI["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["c"]["Text"] = [[For those who accept <font color='rgb(220,137,255)' transparency='0.03269804274348975'><b>nothing less</b></font>
-than <font color='rgb(220,137,255)' transparency='0.03269804274348975'><b>perfection</b></font> in Roblox.]]
-UI["c"]["Position"] = UDim2.new(0, 0, 0.36384, 0)
-
--- // ServerStorage.PinnacleLoader.Main.TextLabel.LocalScript \\ --
-UI["d"] = Instance.new("LocalScript", UI["c"])
+-- ServerStorage.PinnacleLoader
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[PinnacleLoader]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
 
 
--- // ServerStorage.PinnacleLoader.Main.exit \\ --
-UI["e"] = Instance.new("TextButton", UI["2"])
-UI["e"]["BorderSizePixel"] = 0
-UI["e"]["TextSize"] = 14
-UI["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["e"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["e"]["Size"] = UDim2.new(0, 334, 0, 35)
-UI["e"]["Name"] = [[exit]]
-UI["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["e"]["Text"] = [[Exit]]
-UI["e"]["Position"] = UDim2.new(0.0309, 0, 0.89509, 0)
-
--- // ServerStorage.PinnacleLoader.Main.exit.UICorner \\ --
-UI["f"] = Instance.new("UICorner", UI["e"])
-UI["f"]["CornerRadius"] = UDim.new(0.01, 10)
-
--- // ServerStorage.PinnacleLoader.Main.exit.LocalScript \\ --
-UI["10"] = Instance.new("LocalScript", UI["e"])
+-- ServerStorage.PinnacleLoader.Main
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17);
+G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2"]["Size"] = UDim2.new(0, 356, 0, 448);
+G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Main]];
 
 
--- // ServerStorage.PinnacleLoader.Main.percent \\ --
-UI["11"] = Instance.new("TextLabel", UI["2"])
-UI["11"]["BorderSizePixel"] = 0
-UI["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["11"]["TextSize"] = 20
-UI["11"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["11"]["TextColor3"] = Color3.fromRGB(255, 0, 0)
-UI["11"]["BackgroundTransparency"] = 1
-UI["11"]["Size"] = UDim2.new(0, 356, 0, 40)
-UI["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["11"]["Text"] = [[0%]]
-UI["11"]["Name"] = [[percent]]
-UI["11"]["Position"] = UDim2.new(0, 0, 0.14732, 0)
+-- ServerStorage.PinnacleLoader.Main.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0.01, 10);
 
--- // ServerStorage.PinnacleLoader.Main.TextButton \\ --
-UI["12"] = Instance.new("TextButton", UI["2"])
-UI["12"]["BorderSizePixel"] = 0
-UI["12"]["TextSize"] = 14
-UI["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["12"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["12"]["Size"] = UDim2.new(0, 334, 0, 35)
-UI["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["12"]["Text"] = [[Load]]
-UI["12"]["Position"] = UDim2.new(0.0309, 0, 0.80357, 0)
 
--- // ServerStorage.PinnacleLoader.Main.TextButton.UICorner \\ --
-UI["13"] = Instance.new("UICorner", UI["12"])
-UI["13"]["CornerRadius"] = UDim.new(0.01, 10)
+-- ServerStorage.PinnacleLoader.Main.1
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35);
+G2L["4"]["Size"] = UDim2.new(0, 356, 0, 32);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Name"] = [[1]];
 
--- // ServerStorage.PinnacleLoader.Main.TextButton.loadbtn \\ --
-UI["14"] = Instance.new("LocalScript", UI["12"])
-UI["14"]["Name"] = [[loadbtn]]
 
--- // ServerStorage.PinnacleLoader.Main.Loaded \\ --
-UI["15"] = Instance.new("LocalScript", UI["2"])
-UI["15"]["Name"] = [[Loaded]]
+-- ServerStorage.PinnacleLoader.Main.1.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+G2L["5"]["CornerRadius"] = UDim.new(0.01, 10);
 
--- // ServerStorage.PinnacleLoader.Main.TextLabel.LocalScript \\ --
-local function SCRIPT_d()
-local script = UI["d"]
+
+-- ServerStorage.PinnacleLoader.Main.1.2
+G2L["6"] = Instance.new("Frame", G2L["4"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35);
+G2L["6"]["Size"] = UDim2.new(0, 356, 0, 24);
+G2L["6"]["Position"] = UDim2.new(0, 0, 0.52727, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[2]];
+
+
+-- ServerStorage.PinnacleLoader.Main.1.2.UIStroke
+G2L["7"] = Instance.new("UIStroke", G2L["6"]);
+G2L["7"]["Thickness"] = 1.5;
+G2L["7"]["Color"] = Color3.fromRGB(221, 138, 255);
+
+
+-- ServerStorage.PinnacleLoader.Main.1.UIStroke
+G2L["8"] = Instance.new("UIStroke", G2L["4"]);
+G2L["8"]["Thickness"] = 1.5;
+G2L["8"]["Color"] = Color3.fromRGB(221, 138, 255);
+
+
+-- ServerStorage.PinnacleLoader.Main.1.3
+G2L["9"] = Instance.new("Frame", G2L["4"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35);
+G2L["9"]["Size"] = UDim2.new(0, 356, 0, 24);
+G2L["9"]["Position"] = UDim2.new(0, 0, 0.24602, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Name"] = [[3]];
+
+
+-- ServerStorage.PinnacleLoader.Main.UIStroke
+G2L["a"] = Instance.new("UIStroke", G2L["2"]);
+G2L["a"]["Thickness"] = 1.5;
+G2L["a"]["Color"] = Color3.fromRGB(221, 138, 255);
+
+
+-- ServerStorage.PinnacleLoader.Main.loadertext
+G2L["b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["TextSize"] = 20;
+G2L["b"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Size"] = UDim2.new(0, 356, 0, 40);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[Pinnacle Loader]];
+G2L["b"]["Name"] = [[loadertext]];
+
+
+-- ServerStorage.PinnacleLoader.Main.TextLabel
+G2L["c"] = Instance.new("TextLabel", G2L["2"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["TextSize"] = 20;
+G2L["c"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["RichText"] = true;
+G2L["c"]["Size"] = UDim2.new(0, 356, 0, 121);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[For those who accept <font color='rgb(220,137,255)' transparency='0.03269804274348975'><b>nothing less</b></font>
+than <font color='rgb(220,137,255)' transparency='0.03269804274348975'><b>perfection</b></font> in Roblox.]];
+G2L["c"]["Position"] = UDim2.new(0, 0, 0.36384, 0);
+
+
+-- ServerStorage.PinnacleLoader.Main.TextLabel.LocalScript
+G2L["d"] = Instance.new("LocalScript", G2L["c"]);
+
+
+
+-- ServerStorage.PinnacleLoader.Main.exit
+G2L["e"] = Instance.new("TextButton", G2L["2"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["Size"] = UDim2.new(0, 334, 0, 35);
+G2L["e"]["Name"] = [[exit]];
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[Exit]];
+G2L["e"]["Position"] = UDim2.new(0.0309, 0, 0.89509, 0);
+
+
+-- ServerStorage.PinnacleLoader.Main.exit.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+G2L["f"]["CornerRadius"] = UDim.new(0.01, 10);
+
+
+-- ServerStorage.PinnacleLoader.Main.exit.LocalScript
+G2L["10"] = Instance.new("LocalScript", G2L["e"]);
+
+
+
+-- ServerStorage.PinnacleLoader.Main.percent
+G2L["11"] = Instance.new("TextLabel", G2L["2"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["TextSize"] = 20;
+G2L["11"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Size"] = UDim2.new(0, 356, 0, 40);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[0%]];
+G2L["11"]["Name"] = [[percent]];
+G2L["11"]["Position"] = UDim2.new(0, 0, 0.14732, 0);
+
+
+-- ServerStorage.PinnacleLoader.Main.TextButton
+G2L["12"] = Instance.new("TextButton", G2L["2"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 334, 0, 35);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[Load]];
+G2L["12"]["Position"] = UDim2.new(0.0309, 0, 0.80357, 0);
+
+
+-- ServerStorage.PinnacleLoader.Main.TextButton.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+G2L["13"]["CornerRadius"] = UDim.new(0.01, 10);
+
+
+-- ServerStorage.PinnacleLoader.Main.TextButton.loadbtn
+G2L["14"] = Instance.new("LocalScript", G2L["12"]);
+G2L["14"]["Name"] = [[loadbtn]];
+
+
+-- ServerStorage.PinnacleLoader.Main.Loaded
+G2L["15"] = Instance.new("LocalScript", G2L["2"]);
+G2L["15"]["Name"] = [[Loaded]];
+
+
+-- ServerStorage.PinnacleLoader.Main.TextLabel.LocalScript
+local function C_d()
+local script = G2L["d"];
 	local textLabel = script.Parent
 	textLabel.RichText = true
 	textLabel.Text = "For those who accept <font color='rgb(220,137,255)'><b>nothing less</b></font>\nthan <font color='rgb(220,137,255)'><b>perfection</b></font> in Roblox."
@@ -183,22 +210,22 @@ local script = UI["d"]
 		end
 	end)
 	
-end
-task.spawn(SCRIPT_d)
--- // ServerStorage.PinnacleLoader.Main.exit.LocalScript \\ --
-local function SCRIPT_10()
-local script = UI["10"]
+end;
+task.spawn(C_d);
+-- ServerStorage.PinnacleLoader.Main.exit.LocalScript
+local function C_10()
+local script = G2L["10"];
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
 	end)
 	
-end
-task.spawn(SCRIPT_10)
--- // ServerStorage.PinnacleLoader.Main.TextButton.loadbtn \\ --
-local function SCRIPT_14()
-local script = UI["14"]
+end;
+task.spawn(C_10);
+-- ServerStorage.PinnacleLoader.Main.TextButton.loadbtn
+local function C_14()
+local script = G2L["14"];
 	local HttpService = game:GetService("HttpService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local min = 500
@@ -279,7 +306,7 @@ local script = UI["14"]
 			if not doneTriggered then
 				doneTriggered = true
 				local success, result = pcall(function()
-					return game:HttpGet('https://pastebin.com/raw/4wUCbWkW')
+					return game:HttpGet('https://raw.githubusercontent.com/tediousprojekts/PinnacleLoader/refs/heads/main/src')
 				end)
 	
 				if success and result and result ~= "" then
@@ -340,11 +367,11 @@ local script = UI["14"]
 		makeMultipleRequests()
 	end)
 	
-end
-task.spawn(SCRIPT_14)
--- // ServerStorage.PinnacleLoader.Main.Loaded \\ --
-local function SCRIPT_15()
-local script = UI["15"]
+end;
+task.spawn(C_14);
+-- ServerStorage.PinnacleLoader.Main.Loaded
+local function C_15()
+local script = G2L["15"];
 	print([[
 	
 	
@@ -380,7 +407,7 @@ local script = UI["15"]
 	
 	]])
 	
-end
-task.spawn(SCRIPT_15)
+end;
+task.spawn(C_15);
 
-return UI["1"], require;
+return G2L["1"], require;
