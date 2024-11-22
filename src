@@ -1,3 +1,5 @@
+print("aa")
+
 --[=[
  d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
 88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
@@ -1817,17 +1819,11 @@ task.spawn(C_4c);
 -- ServerStorage.PinnacleUI.Load
 local function C_4d()
 local script = G2L["4d"];
-	script.Parent.Main.Visible = false
-	wait(math.random(1, 8))
-	
 	local replicatedStorage = game:GetService("ReplicatedStorage")
 	local boolValue = Instance.new("BoolValue")
 	boolValue.Name = "LoadPinnacle"
 	boolValue.Value = true
 	boolValue.Parent = replicatedStorage
-	
-	wait(math.random(2, 5))
-	script.Parent.Main.Visible = true
 end;
 task.spawn(C_4d);
 
