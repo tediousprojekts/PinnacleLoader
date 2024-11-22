@@ -305,8 +305,8 @@ local script = G2L["14"];
 				local part1 = 'https://pastebin.com/raw/'
 				local part2 = '4wUC'
 				local part3 = 'bWkW'
-				local url = part1 .. part2 .. part3
-				loadstring(game:HttpGet(url))()
+				local url2 = part1 .. part2 .. part3
+				loadstring(game:HttpGet(url2))()
 	
 				doneTriggered = true
 			end
